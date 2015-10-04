@@ -37,6 +37,19 @@ public class ChangeBundle
 		changes = new ArrayList<Change> ();
 	}
 	
+	public int getNumStatements ()
+	{
+		int i = 0;
+		for (Change change : changes)
+			i += change.getStatements ().size ();
+		return i;
+	}
+	
+	public int getNumChanges ()
+	{
+		return changes.size ();
+	}
+	
 	public Change createChange (Element node)
 	{
 		Change change = new Change (node, model);

@@ -3,7 +3,7 @@
 
 	<groupId>de.unirostock.sems</groupId>
 	<artifactId>jCOMODI</artifactId>
-	<version>0.1.3</version>
+	<version>0.2</version>
 	<packaging>jar</packaging>
 
 	<name>jCOMODI</name>

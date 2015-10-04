@@ -44,11 +44,11 @@ public class Change
 	private void init (String nodeId, Model model)
 	{
 		this.model = model;
-		this.subject = model.createResource (ChangeBundle.BAESE_URI + "#" + nodeId);
+		this.subject = model.createResource (ChangeFactory.BAESE_URI + "#" + nodeId);
 		this.statements = new ArrayList<Statement> ();
 		this.statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeBundle.RDF_NS, "type"),
-			model.createResource (ChangeBundle.COMODI_NS + "Change")));
+			model.createProperty (ChangeFactory.RDF_NS, "type"),
+			model.createResource (ChangeFactory.COMODI_NS + "Change")));
 	}
 	
 	public List<Statement> getStatements ()
@@ -59,40 +59,40 @@ public class Change
 	public Change appliedTo (ComodiEntity entity)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeBundle.COMODI_NS, "appliedTo"),
-			model.createResource (ChangeBundle.COMODI_NS + entity.getTerm ())));
+			model.createProperty (ChangeFactory.COMODI_NS, "appliedTo"),
+			model.createResource (ChangeFactory.COMODI_NS + entity.getTerm ())));
 		return this;
 	}
 	
 	public Change intended (ComodiIntention intention)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeBundle.COMODI_NS, "intended"),
-			model.createResource (ChangeBundle.COMODI_NS + intention.getTerm ())));
+			model.createProperty (ChangeFactory.COMODI_NS, "intended"),
+			model.createResource (ChangeFactory.COMODI_NS + intention.getTerm ())));
 		return this;
 	}
 	
 	public Change hadReason (ComodiReason reason)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeBundle.COMODI_NS, "hadReason"),
-			model.createResource (ChangeBundle.COMODI_NS + reason.getTerm ())));
+			model.createProperty (ChangeFactory.COMODI_NS, "hadReason"),
+			model.createResource (ChangeFactory.COMODI_NS + reason.getTerm ())));
 		return this;
 	}
 	
 	public Change changeType (ComodiChangeType changeType)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeBundle.COMODI_NS, "changeType"),
-			model.createResource (ChangeBundle.COMODI_NS + changeType.getTerm ())));
+			model.createProperty (ChangeFactory.COMODI_NS, "changeType"),
+			model.createResource (ChangeFactory.COMODI_NS + changeType.getTerm ())));
 		return this;
 	}
 	
 	public Change affected (ComodiTarget target)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeBundle.COMODI_NS, "affected"),
-			model.createResource (ChangeBundle.COMODI_NS + target.getTerm ())));
+			model.createProperty (ChangeFactory.COMODI_NS, "affected"),
+			model.createResource (ChangeFactory.COMODI_NS + target.getTerm ())));
 		return this;
 	}
 	

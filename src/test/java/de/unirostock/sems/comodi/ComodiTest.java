@@ -8,6 +8,7 @@ import java.io.InputStream;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.jdom2.Document;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -37,7 +38,7 @@ public class ComodiTest
 			TreeDocument d = new TreeDocument (XmlTools.readDocument ("<root id='25'/>"), null);
 			DocumentNode dn = d.getRoot ();
 			
-			ChangeBundle cb = new ChangeBundle ("file://bives.patch");
+			ChangeFactory cb = new ChangeFactory ("file://bives.patch");
 			
 			Change change = cb.createChange (dn);
 			change
@@ -51,13 +52,13 @@ public class ComodiTest
 			
 			String xml = cb.getRdfXml ();
 			//xml = xml.replaceAll ("file://bives.patch", "");
+			System.out.println (xml);
 			TreeDocument d2 = new TreeDocument (XmlTools.readDocument (xml), null);
 
 			assertEquals ("expected 8 nodes", 8, d2.getNumNodes ());
 			assertEquals ("expected 2 'affected' nodes", 2, d2.getNodesByTag ("affected").size ());
 			assertEquals ("expected 1 'appliedTo' node", 1, d2.getNodesByTag ("appliedTo").size ());
 			
-			//System.out.println (xml);
 			
 			InputStream stream = new ByteArrayInputStream(xml.getBytes());
 			Model model = ModelFactory.createDefaultModel();

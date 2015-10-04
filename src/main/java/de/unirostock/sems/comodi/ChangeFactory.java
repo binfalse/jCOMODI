@@ -15,7 +15,7 @@ import de.unirostock.sems.xmlutils.ds.DocumentNode;
  * @author Martin Scharm
  *
  */
-public class ChangeBundle
+public class ChangeFactory
 {
 	private Model model;
 
@@ -25,7 +25,7 @@ public class ChangeBundle
 	
 	private List<Change> changes;
 	
-	public ChangeBundle (String baseUri)
+	public ChangeFactory (String baseUri)
 	{
 		BAESE_URI = baseUri;
 		

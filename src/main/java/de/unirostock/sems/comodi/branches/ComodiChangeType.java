@@ -43,4 +43,9 @@ public class ComodiChangeType
 		return new ComodiChangeType ("Insertion");
 	}
 	
+	public static ComodiChangeType getTriggered ()
+	{
+		return new ComodiChangeType ("Triggered");
+	}
+	
 }

@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.output.ByteArrayOutputStream;
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.jdom2.Element;
 
 import de.unirostock.sems.xmlutils.ds.DocumentNode;
 
@@ -36,6 +35,13 @@ public class ChangeBundle
 		model.setNsPrefix("rdf", RDF_NS);
 		
 		changes = new ArrayList<Change> ();
+	}
+	
+	public Change createChange (Element node)
+	{
+		Change change = new Change (node, model);
+		changes.add (change);
+		return change;
 	}
 	
 	public Change createChange (DocumentNode node)

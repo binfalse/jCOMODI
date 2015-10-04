@@ -9,6 +9,7 @@ import java.util.List;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
+import org.jdom2.Element;
 
 import de.unirostock.sems.comodi.branches.ComodiChangeType;
 import de.unirostock.sems.comodi.branches.ComodiEntity;
@@ -29,10 +30,21 @@ public class Change
 	private List<Statement> statements;
 	
 	
+	public Change (Element node, Model model)
+	{
+		init (node.getAttributeValue ("id"), model);
+	}
+	
+	
 	public Change (DocumentNode node, Model model)
 	{
+		init (node.getId (), model);
+	}
+	
+	private void init (String nodeId, Model model)
+	{
 		this.model = model;
-		this.subject = model.createResource (ChangeBundle.BAESE_URI + "#" + node.getId ());
+		this.subject = model.createResource (ChangeBundle.BAESE_URI + "#" + nodeId);
 		this.statements = new ArrayList<Statement> ();
 		this.statements.add (model.createStatement (this.subject,
 			model.createProperty (ChangeBundle.RDF_NS, "type"),

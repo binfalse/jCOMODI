@@ -1,5 +1,21 @@
 /**
+ * This file is part of jCOMODI - a library for the COMODI ontology.
+ * Copyright (c) 2015, Martin Scharm <jcomodi-code@binfalse.de>
  * 
+ * jCOMODI is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as 
+ * published by the Free Software Foundation, either version 3 of
+ * the License, or (at your option) any later version.
+ * 
+ * jCOMODI is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with jCOMODI. If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * @see <a href="http://purl.org/net/comodi">COMODI</a>
  */
 package de.unirostock.sems.comodi.branches;
 
@@ -7,45 +23,106 @@ import de.unirostock.sems.comodi.ComodiBranchTerm;
 
 
 /**
- * @author Martin Scharm
+ * The Class ComodiChangeType creating terms of COMODI's Type branch.
  *
+ * @author Martin Scharm
  */
 public class ComodiChangeType
 	extends ComodiBranchTerm
 {
+	
+	/**
+	 * The Constructor -- just to call the constructor of the super class.
+	 *
+	 * @param term the term
+	 */
 	protected ComodiChangeType (String term)
 	{
 		super (term);
 	}
 	
+	/**
+	 * Gets the term representing a deletion.
+	 *
+	 * <pre>
+	 * Deletion -> Type
+	 * </pre>
+	 * 
+	 * @return the deletion term
+	 */
 	public static ComodiChangeType getDeletion()
 	{
 		return new ComodiChangeType ("Deletion");
 	}
 	
+	/**
+	 * Gets the term representing an update.
+	 *
+	 * <pre>
+	 * Update -> Type
+	 * </pre>
+	 *
+	 * @return the update term
+	 */
 	public static ComodiChangeType getUpdate()
 	{
 		return new ComodiChangeType ("Update");
 	}
 	
-	public static ComodiChangeType getAttributeValue()
+	/**
+	 * Gets the term representing an update of an attribute value.
+	 *
+	 * <pre>
+	 * AttributeValue -> Update -> Type
+	 * </pre>
+	 *
+	 * @return the attribute update term
+	 */
+	public static ComodiChangeType getAttributeValue ()
 	{
 		return new ComodiChangeType ("AttributeValue");
 	}
 	
+	/**
+	 * Gets the term representing a move.
+	 *
+	 * <pre>
+	 * Move -> Type
+	 * </pre>
+	 * 
+	 * @return the move term
+	 */
 	public static ComodiChangeType getMove()
 	{
 		return new ComodiChangeType ("Move");
 	}
 	
+	/**
+	 * Gets the term representing a permutation of entities.
+	 *
+	 * <pre>
+	 * PermutationOfEntities -> Move -> Type
+	 * </pre>
+	 *
+	 * @return the permutation of entities term
+	 */
+	public static ComodiChangeType getPermutationOfEntities()
+	{
+		return new ComodiChangeType ("PermutationOfEntities");
+	}
+	
+	/**
+	 * Gets the term representing an insertion.
+	 *
+	 * <pre>
+	 * Insertion -> Type
+	 * </pre>
+	 *
+	 * @return the insertion term
+	 */
 	public static ComodiChangeType getInsertion()
 	{
 		return new ComodiChangeType ("Insertion");
-	}
-	
-	public static ComodiChangeType getTriggered ()
-	{
-		return new ComodiChangeType ("Triggered");
 	}
 	
 }

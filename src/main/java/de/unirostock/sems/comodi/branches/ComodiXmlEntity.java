@@ -44,7 +44,9 @@ extends ComodiBranchTerm
 	/**
 	 * Gets the term representing an XML node.
 	 * 
+	 * <pre>
 	 * Node -> XmlEntity
+	 * </pre>
 	 *
 	 * @return the node term
 	 */

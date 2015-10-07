@@ -23,7 +23,7 @@ import de.unirostock.sems.comodi.ComodiBranchTerm;
 
 
 /**
- * The Class ComodiXmlEntity to create terms of COMODI's XmlEntity branch.
+ * The Class ComodiXmlEntity creating terms of COMODI's XmlEntity branch.
  *
  * @author Martin Scharm
  */

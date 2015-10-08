@@ -3,7 +3,7 @@
  * Copyright (c) 2015, Martin Scharm <jcomodi-code@binfalse.de>
  * 
  * jCOMODI is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as 
+ * it under the terms of the GNU Lesser General Public License as
  * published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version.
  * 
@@ -31,55 +31,60 @@ import org.jdom2.Element;
 import de.unirostock.sems.xmlutils.ds.DocumentNode;
 
 
+
 /**
  * The Class ChangeFactory creating and storing changes.
- * A new change can be obtained by calling {@link #createChange(Element)} or {@link #createChange(DocumentNode)}.
- * The annotations can be obtained using 
- * {@link #getAnnotaions()} (as Apache/Jena RDF model), 
- * {@link #getRdfXml()} (encoded in RDF/XML), 
- * {@link #printTtl()} (printed to sysout in TURTLE format), or 
+ * A new change can be obtained by calling {@link #createChange(Element)} or
+ * {@link #createChange(DocumentNode)}.
+ * The annotations can be obtained using {@link #getAnnotaions()} (as
+ * Apache/Jena RDF model), {@link #getRdfXml()} (encoded in RDF/XML),
+ * {@link #printTtl()} (printed to sysout in TURTLE format), or
  * {@link #printXml()} (printed to sysout in RDF/XML format).
- *
+ * 
  * @author Martin Scharm
  */
 public class ChangeFactory
 {
 	
 	/** The Apache/Jena RDF model. */
-	private Model model;
-
+	private Model								model;
+	
 	/** The RDF namespace. */
-	public static final String RDF_NS = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+	public static final String	RDF_NS		= "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 	
 	/** The namespace of COMODI. */
-	public static final String COMODI_NS = "http://purl.org/net/comodi#";
+	public static final String	COMODI_NS	= "http://purl.org/net/comodi#";
 	
 	/** The URI of the file containing the changes we'll be talking about. */
-	private URI baseUri;
+	private URI									baseUri;
 	
 	/** The list of changes. */
-	private List<Change> changes;
+	private List<Change>				changes;
+	
 	
 	/**
 	 * The Constructor specifying the base URI of the file containing the changes.
-	 *
-	 * @param baseUri the URI of the file containing the changes we'll be talking about
+	 * 
+	 * @param baseUri
+	 *          the URI of the file containing the changes we'll be talking about
 	 */
 	public ChangeFactory (URI baseUri)
 	{
 		this.baseUri = baseUri;
 		
-		model = ModelFactory.createDefaultModel();//.createOntologyModel(OntModelSpec.OWL_MEM);
+		model = ModelFactory.createDefaultModel ();// .createOntologyModel(OntModelSpec.OWL_MEM);
 		
-		model.setNsPrefix("comodi", COMODI_NS);
-		model.setNsPrefix("rdf", RDF_NS);
+		model.setNsPrefix ("comodi", COMODI_NS);
+		model.setNsPrefix ("rdf", RDF_NS);
 		
 		changes = new ArrayList<Change> ();
 	}
 	
+	
 	/**
-	 * Gets the number of overall statements in all changes produced by this change factory.
-	 *
+	 * Gets the number of overall statements in all changes produced by this
+	 * change factory.
+	 * 
 	 * @return the number statements
 	 */
 	public int getNumStatements ()
@@ -90,9 +95,10 @@ public class ChangeFactory
 		return i;
 	}
 	
+	
 	/**
 	 * Gets the number changes produced by this factory.
-	 *
+	 * 
 	 * @return the number changes
 	 */
 	public int getNumChanges ()
@@ -100,11 +106,13 @@ public class ChangeFactory
 		return changes.size ();
 	}
 	
+	
 	/**
 	 * Creates a change encoded in the JDOM element <code>node</code>.
 	 * <code>node</code> is supposed to have an <code>id</code> attribute.
-	 *
-	 * @param node the node encoding for the change
+	 * 
+	 * @param node
+	 *          the node encoding for the change
 	 * @return the change
 	 */
 	public Change createChange (Element node)
@@ -114,11 +122,14 @@ public class ChangeFactory
 		return change;
 	}
 	
+	
 	/**
-	 * Creates a change encoded in the {@link de.unirostock.sems.xmlutils.ds.DocumentNode DocumentNode} element <code>node</code>.
-	 * <code>node</code> is supposed to have an id-attribute.
-	 *
-	 * @param node the node encoding for the change
+	 * Creates a change encoded in the
+	 * {@link de.unirostock.sems.xmlutils.ds.DocumentNode DocumentNode} element
+	 * <code>node</code>. <code>node</code> is supposed to have an id-attribute.
+	 * 
+	 * @param node
+	 *          the node encoding for the change
 	 * @return the change
 	 * @see de.unirostock.sems.xmlutils.ds.DocumentNode DocumentNode
 	 */
@@ -129,9 +140,10 @@ public class ChangeFactory
 		return change;
 	}
 	
+	
 	/**
 	 * Compiles the assembled changes in an RDF/XML string.
-	 *
+	 * 
 	 * @return the RDF/XML string
 	 */
 	public String getRdfXml ()
@@ -144,9 +156,10 @@ public class ChangeFactory
 		return out.toString ();
 	}
 	
+	
 	/**
 	 * Gets the annotations.
-	 *
+	 * 
 	 * @return the annotations
 	 */
 	public Model getAnnotaions ()
@@ -156,10 +169,11 @@ public class ChangeFactory
 		
 		return model;
 	}
-
+	
 	
 	/**
-	 * Prints the TURTLE serialisation to sysout. Basically for debugging purposes.
+	 * Prints the TURTLE serialisation to sysout. Basically for debugging
+	 * purposes.
 	 */
 	public void printTtl ()
 	{
@@ -169,8 +183,10 @@ public class ChangeFactory
 		model.write (System.out, "TURTLE");
 	}
 	
+	
 	/**
-	 * Prints the RDF/XML serialisation to sysout. Basically for debugging purposes.
+	 * Prints the RDF/XML serialisation to sysout. Basically for debugging
+	 * purposes.
 	 */
 	public void printXml ()
 	{

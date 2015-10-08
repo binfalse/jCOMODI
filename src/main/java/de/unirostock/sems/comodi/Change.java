@@ -3,7 +3,7 @@
  * Copyright (c) 2015, Martin Scharm <jcomodi-code@binfalse.de>
  * 
  * jCOMODI is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as 
+ * it under the terms of the GNU Lesser General Public License as
  * published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version.
  * 
@@ -36,16 +36,22 @@ import de.unirostock.sems.comodi.branches.ComodiTarget;
 import de.unirostock.sems.xmlutils.ds.DocumentNode;
 
 
+
 /**
  * The Class Change representing the Change concept in COMODI.
  * Every change may
  * <ul>
- * <li>be applied to a {@link ComodiXmlEntity}, see {@link #appliesTo(ComodiXmlEntity)} 
+ * <li>be applied to a {@link ComodiXmlEntity}, see
+ * {@link #appliesTo(ComodiXmlEntity)}
  * <li>affect a {@link ComodiTarget}, see {@link #affects(ComodiTarget)}
- * <li>intent a {@link ComodiIntention}, see {@link #hasIntention(ComodiIntention)}
- * <li>be because of a {@link ComodiReason}, see {@link #hasReason(ComodiReason)}
- * <li>be of type a {@link ComodiChangeType}, see {@link #hasChangeType(ComodiChangeType)}
- * <li>be triggered by another a {@link Change}, see {@link #wasTriggeredBy(String)}
+ * <li>intent a {@link ComodiIntention}, see
+ * {@link #hasIntention(ComodiIntention)}
+ * <li>be because of a {@link ComodiReason}, see
+ * {@link #hasReason(ComodiReason)}
+ * <li>be of type a {@link ComodiChangeType}, see
+ * {@link #hasChangeType(ComodiChangeType)}
+ * <li>be triggered by another a {@link Change}, see
+ * {@link #wasTriggeredBy(String)}
  * </ul>
  * 
  * @author Martin Scharm
@@ -54,25 +60,30 @@ public class Change
 {
 	
 	/** The current change is our subject in all RDF statements. */
-	private Resource subject;
+	private Resource				subject;
 	
 	/** The Apache/Jena RDF model. */
-	private Model model;
+	private Model						model;
 	
 	/** The RDF statements about this change. */
-	private List<Statement> statements;
+	private List<Statement>	statements;
 	
 	/** The base URI of the elements we're talking about. */
-	private URI baseUri;
+	private URI							baseUri;
 	
 	
 	/**
-	 * The Constructor specifying the node in the delta and the Apache/Jena RDF model.
-	 * The node <code>node</code> is supposed to have an <code>id</code> attribute.
-	 *
-	 * @param node the node encoding for the differences
-	 * @param model the RDF model
-	 * @param baseUri the base URI of the elements we're talking about
+	 * The Constructor specifying the node in the delta and the Apache/Jena RDF
+	 * model.
+	 * The node <code>node</code> is supposed to have an <code>id</code>
+	 * attribute.
+	 * 
+	 * @param node
+	 *          the node encoding for the differences
+	 * @param model
+	 *          the RDF model
+	 * @param baseUri
+	 *          the base URI of the elements we're talking about
 	 */
 	public Change (Element node, Model model, URI baseUri)
 	{
@@ -81,24 +92,32 @@ public class Change
 	
 	
 	/**
-	 * The Constructor specifying the node in the delta and the Apache/Jena RDF model.
+	 * The Constructor specifying the node in the delta and the Apache/Jena RDF
+	 * model.
 	 * The node <code>node</code> is supposed to have an id-attribute.
-	 *
-	 * @param node the node encoding for the differences
-	 * @param model the RDF model
-	 * @param baseUri the base URI of the elements we're talking about
+	 * 
+	 * @param node
+	 *          the node encoding for the differences
+	 * @param model
+	 *          the RDF model
+	 * @param baseUri
+	 *          the base URI of the elements we're talking about
 	 */
 	public Change (DocumentNode node, Model model, URI baseUri)
 	{
 		init (node.getId (), model, baseUri);
 	}
 	
+	
 	/**
 	 * Initialises this change.
-	 *
-	 * @param nodeId the node id
-	 * @param model the model
-	 * @param baseUri the base URI of the elements we're talking about
+	 * 
+	 * @param nodeId
+	 *          the node id
+	 * @param model
+	 *          the model
+	 * @param baseUri
+	 *          the base URI of the elements we're talking about
 	 */
 	private void init (String nodeId, Model model, URI baseUri)
 	{
@@ -110,9 +129,10 @@ public class Change
 			model.createResource (ChangeFactory.COMODI_NS + "Change")));
 	}
 	
+	
 	/**
 	 * Gets the RDF statements about this change.
-	 *
+	 * 
 	 * @return the statements
 	 */
 	public List<Statement> getStatements ()
@@ -120,10 +140,12 @@ public class Change
 		return statements;
 	}
 	
+	
 	/**
 	 * Adds information about the XML entity that this change was applied to.
-	 *
-	 * @param entity the type of XML entity
+	 * 
+	 * @param entity
+	 *          the type of XML entity
 	 * @return this change
 	 */
 	public Change appliesTo (ComodiXmlEntity entity)
@@ -134,10 +156,12 @@ public class Change
 		return this;
 	}
 	
+	
 	/**
 	 * Adds information about the intention of this change.
-	 *
-	 * @param intention the intention
+	 * 
+	 * @param intention
+	 *          the intention
 	 * @return this change
 	 */
 	public Change hasIntention (ComodiIntention intention)
@@ -148,10 +172,12 @@ public class Change
 		return this;
 	}
 	
+	
 	/**
 	 * Adds information about the reason of this change.
-	 *
-	 * @param reason the reason
+	 * 
+	 * @param reason
+	 *          the reason
 	 * @return this change
 	 */
 	public Change hasReason (ComodiReason reason)
@@ -162,10 +188,12 @@ public class Change
 		return this;
 	}
 	
+	
 	/**
 	 * Adds information about the type of this change.
-	 *
-	 * @param changeType the change type
+	 * 
+	 * @param changeType
+	 *          the change type
 	 * @return this change
 	 */
 	public Change hasChangeType (ComodiChangeType changeType)
@@ -176,10 +204,12 @@ public class Change
 		return this;
 	}
 	
+	
 	/**
 	 * Adds information about the target that is affected by this change.
-	 *
-	 * @param target the target
+	 * 
+	 * @param target
+	 *          the target
 	 * @return this change
 	 */
 	public Change affects (ComodiTarget target)
@@ -190,12 +220,12 @@ public class Change
 		return this;
 	}
 	
-
 	
 	/**
 	 * Links to a change that triggered this change.
-	 *
-	 * @param nodeId the id of the node that triggered this change
+	 * 
+	 * @param nodeId
+	 *          the id of the node that triggered this change
 	 * @return this change
 	 */
 	public Change wasTriggeredBy (String nodeId)
@@ -205,6 +235,5 @@ public class Change
 			model.createResource (baseUri.toString () + "#" + nodeId)));
 		return this;
 	}
-	
 	
 }

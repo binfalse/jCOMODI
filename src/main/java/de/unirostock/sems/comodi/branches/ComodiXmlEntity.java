@@ -3,7 +3,7 @@
  * Copyright (c) 2015, Martin Scharm <jcomodi-code@binfalse.de>
  * 
  * jCOMODI is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as 
+ * it under the terms of the GNU Lesser General Public License as
  * published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version.
  * 
@@ -22,24 +22,28 @@ package de.unirostock.sems.comodi.branches;
 import de.unirostock.sems.comodi.ComodiBranchTerm;
 
 
+
 /**
  * The Class ComodiXmlEntity creating terms of COMODI's XmlEntity branch.
- *
+ * 
  * @author Martin Scharm
+ * @see <a href="http://purl.org/net/comodi#XmlEntity">XmlEntity definition</a>
  */
 public class ComodiXmlEntity
-extends ComodiBranchTerm
+	extends ComodiBranchTerm
 {
 	
 	/**
 	 * The Constructor -- just to call the constructor of the super class.
-	 *
-	 * @param term the term
+	 * 
+	 * @param term
+	 *          the term
 	 */
 	protected ComodiXmlEntity (String term)
 	{
 		super (term);
 	}
+	
 	
 	/**
 	 * Gets the term representing an XML node.
@@ -47,13 +51,15 @@ extends ComodiBranchTerm
 	 * <pre>
 	 * Node -> XmlEntity
 	 * </pre>
-	 *
+	 * 
 	 * @return the node term
+	 * @see <a href="http://purl.org/net/comodi#Node">term definition</a>
 	 */
 	public static ComodiXmlEntity getNode ()
 	{
 		return new ComodiXmlEntity ("Node");
 	}
+	
 	
 	/**
 	 * Gets the term representing an XML attribute.
@@ -63,78 +69,92 @@ extends ComodiBranchTerm
 	 * </pre>
 	 * 
 	 * @return the attribute term
+	 * @see <a href="http://purl.org/net/comodi#Attribute">term definition</a>
 	 */
 	public static ComodiXmlEntity getAttribute ()
 	{
 		return new ComodiXmlEntity ("Attribute");
 	}
 	
+	
 	/**
-	 * Gets the term representing an XML entity identifier, typically the <code>id</code> attribute.
-	 *
+	 * Gets the term representing an XML entity identifier, typically the
+	 * <code>id</code> attribute.
+	 * 
 	 * <pre>
 	 * Attribute -> XmlEntity
 	 * </pre>
 	 * 
 	 * @return the entity identifier term
+	 * @see <a href="http://purl.org/net/comodi#EntityIdentifier">term
+	 *      definition</a>
 	 */
 	public static ComodiXmlEntity getEntityIdentifier ()
 	{
 		return new ComodiXmlEntity ("EntityIdentifier");
 	}
 	
+	
 	/**
 	 * Gets the term representing a change in the model identifier.
 	 * For example the <code>&lt;model id=".."</code> in SBML models.
-	 *
+	 * 
 	 * <pre>
 	 * ModelId -> Attribute -> XmlEntity
 	 * </pre>
 	 * 
 	 * @return the model id term
+	 * @see <a href="http://purl.org/net/comodi#ModelId">term definition</a>
 	 */
 	public static ComodiXmlEntity getModelId ()
 	{
 		return new ComodiXmlEntity ("ModelId");
 	}
 	
+	
 	/**
-	 * Gets the resenting an XML entity name, typically the <code>name</code> attribute.
-	 *
+	 * Gets the resenting an XML entity name, typically the <code>name</code>
+	 * attribute.
+	 * 
 	 * <pre>
 	 * EntityName -> Attribute -> XmlEntity
 	 * </pre>
 	 * 
 	 * @return the entity name term
+	 * @see <a href="http://purl.org/net/comodi#EntityName">term definition</a>
 	 */
 	public static ComodiXmlEntity getEntityName ()
 	{
 		return new ComodiXmlEntity ("EntityName");
 	}
 	
+	
 	/**
 	 * Gets the representing a change in the model name.
 	 * For example the <code>&lt;model name=".."</code> in SBML models.
-	 *
+	 * 
 	 * <pre>
 	 * ModelName -> Attribute -> XmlEntity
 	 * </pre>
 	 * 
 	 * @return the model name term
+	 * @see <a href="http://purl.org/net/comodi#ModelName">term definition</a>
 	 */
 	public static ComodiXmlEntity getModelName ()
 	{
 		return new ComodiXmlEntity ("ModelName");
 	}
 	
+	
 	/**
 	 * Gets the term representing an XML text node.
-	 *
+	 * 
 	 * <pre>
 	 * Text -> XmlEntity
 	 * </pre>
 	 * 
 	 * @return the text node term
+	 * @see <a href="http://purl.org/net/comodi#Text">term definition</a>
 	 */
 	public static ComodiXmlEntity getText ()
 	{

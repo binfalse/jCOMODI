@@ -3,7 +3,7 @@
  * Copyright (c) 2015, Martin Scharm <jcomodi-code@binfalse.de>
  * 
  * jCOMODI is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as 
+ * it under the terms of the GNU Lesser General Public License as
  * published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version.
  * 
@@ -22,10 +22,12 @@ package de.unirostock.sems.comodi.branches;
 import de.unirostock.sems.comodi.ComodiBranchTerm;
 
 
+
 /**
  * The Class ComodiReason creating terms of COMODI's Reason branch.
- *
+ * 
  * @author Martin Scharm
+ * @see <a href="http://purl.org/net/comodi#Reason">Reason definition</a>
  */
 public class ComodiReason
 	extends ComodiBranchTerm
@@ -33,13 +35,15 @@ public class ComodiReason
 	
 	/**
 	 * The Constructor -- just to call the constructor of the super class.
-	 *
-	 * @param term the term
+	 * 
+	 * @param term
+	 *          the term
 	 */
 	protected ComodiReason (String term)
 	{
 		super (term);
 	}
+	
 	
 	/**
 	 * Gets the term representing a typo.
@@ -47,13 +51,15 @@ public class ComodiReason
 	 * <pre>
 	 * Typo -> Reason
 	 * </pre>
-	 *
+	 * 
 	 * @return the typo term
+	 * @see <a href="http://purl.org/net/comodi#Typo">term definition</a>
 	 */
-	public static ComodiReason getTypo()
+	public static ComodiReason getTypo ()
 	{
 		return new ComodiReason ("Typo");
 	}
+	
 	
 	/**
 	 * Gets the term representing a knowledge gain.
@@ -61,13 +67,15 @@ public class ComodiReason
 	 * <pre>
 	 * KnowledgeGain -> Reason
 	 * </pre>
-	 *
+	 * 
 	 * @return the knowledge gain term
+	 * @see <a href="http://purl.org/net/comodi#KnowledgeGain">term definition</a>
 	 */
-	public static ComodiReason getKnowledgeGain()
+	public static ComodiReason getKnowledgeGain ()
 	{
 		return new ComodiReason ("KnowledgeGain");
 	}
+	
 	
 	/**
 	 * Gets the term representing a mismatch with publication.
@@ -75,13 +83,16 @@ public class ComodiReason
 	 * <pre>
 	 * MismatchWithPublication -> Reason
 	 * </pre>
-	 *
+	 * 
 	 * @return the mismatch with publication term
+	 * @see <a href="http://purl.org/net/comodi#MismatchWithPublication">term
+	 *      definition</a>
 	 */
-	public static ComodiReason getMismatchWithPublication()
+	public static ComodiReason getMismatchWithPublication ()
 	{
 		return new ComodiReason ("MismatchWithPublication");
 	}
+	
 	
 	/**
 	 * Gets the term representing a model curation.
@@ -89,10 +100,11 @@ public class ComodiReason
 	 * <pre>
 	 * ModelCuration -> Reason
 	 * </pre>
-	 *
+	 * 
 	 * @return the model curation term
+	 * @see <a href="http://purl.org/net/comodi#ModelCuration">term definition</a>
 	 */
-	public static ComodiReason getModelCuration()
+	public static ComodiReason getModelCuration ()
 	{
 		return new ComodiReason ("ModelCuration");
 	}

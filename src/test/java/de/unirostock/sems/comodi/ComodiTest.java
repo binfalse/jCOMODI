@@ -75,14 +75,14 @@ public class ComodiTest
 			
 			String xml = cb.getRdfXml ();
 			// xml = xml.replaceAll ("file://bives.patch", "");
-			System.out.println (xml);
+			//System.out.println (xml);
 			TreeDocument d2 = new TreeDocument (XmlTools.readDocument (xml), null);
 			
 			assertEquals ("expected 8 nodes", 8, d2.getNumNodes ());
 			assertEquals ("expected 2 'affected' nodes", 2,
-				d2.getNodesByTag ("affected").size ());
-			assertEquals ("expected 1 'appliedTo' node", 1,
-				d2.getNodesByTag ("appliedTo").size ());
+				d2.getNodesByTag ("affects").size ());
+			assertEquals ("expected 1 'appliesTo' node", 1,
+				d2.getNodesByTag ("appliesTo").size ());
 			
 			InputStream stream = new ByteArrayInputStream (xml.getBytes ());
 			Model model = ModelFactory.createDefaultModel ();

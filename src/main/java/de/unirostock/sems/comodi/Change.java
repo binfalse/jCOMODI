@@ -40,12 +40,12 @@ import de.unirostock.sems.xmlutils.ds.DocumentNode;
  * The Class Change representing the Change concept in COMODI.
  * Every change may
  * <ul>
- * <li>be applied to a {@link ComodiXmlEntity}, see {@link #appliedTo(ComodiXmlEntity)} 
- * <li>affect a {@link ComodiTarget}, see {@link #affected(ComodiTarget)}
- * <li>intent a {@link ComodiIntention}, see {@link #intended(ComodiIntention)}
- * <li>be because of a {@link ComodiReason}, see {@link #hadReason(ComodiReason)}
- * <li>be of type a {@link ComodiChangeType}, see {@link #changeType(ComodiChangeType)}
- * <li>be triggered by another a {@link Change}, see {@link #triggeredBy(String)}
+ * <li>be applied to a {@link ComodiXmlEntity}, see {@link #appliesTo(ComodiXmlEntity)} 
+ * <li>affect a {@link ComodiTarget}, see {@link #affects(ComodiTarget)}
+ * <li>intent a {@link ComodiIntention}, see {@link #hasIntention(ComodiIntention)}
+ * <li>be because of a {@link ComodiReason}, see {@link #hasReason(ComodiReason)}
+ * <li>be of type a {@link ComodiChangeType}, see {@link #hasChangeType(ComodiChangeType)}
+ * <li>be triggered by another a {@link Change}, see {@link #wasTriggeredBy(String)}
  * </ul>
  * 
  * @author Martin Scharm
@@ -126,10 +126,10 @@ public class Change
 	 * @param entity the type of XML entity
 	 * @return this change
 	 */
-	public Change appliedTo (ComodiXmlEntity entity)
+	public Change appliesTo (ComodiXmlEntity entity)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeFactory.COMODI_NS, "appliedTo"),
+			model.createProperty (ChangeFactory.COMODI_NS, "appliesTo"),
 			model.createResource (ChangeFactory.COMODI_NS + entity.getTerm ())));
 		return this;
 	}
@@ -140,10 +140,10 @@ public class Change
 	 * @param intention the intention
 	 * @return this change
 	 */
-	public Change intended (ComodiIntention intention)
+	public Change hasIntention (ComodiIntention intention)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeFactory.COMODI_NS, "intended"),
+			model.createProperty (ChangeFactory.COMODI_NS, "hasIntention"),
 			model.createResource (ChangeFactory.COMODI_NS + intention.getTerm ())));
 		return this;
 	}
@@ -154,10 +154,10 @@ public class Change
 	 * @param reason the reason
 	 * @return this change
 	 */
-	public Change hadReason (ComodiReason reason)
+	public Change hasReason (ComodiReason reason)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeFactory.COMODI_NS, "hadReason"),
+			model.createProperty (ChangeFactory.COMODI_NS, "hasReason"),
 			model.createResource (ChangeFactory.COMODI_NS + reason.getTerm ())));
 		return this;
 	}
@@ -168,10 +168,10 @@ public class Change
 	 * @param changeType the change type
 	 * @return this change
 	 */
-	public Change changeType (ComodiChangeType changeType)
+	public Change hasChangeType (ComodiChangeType changeType)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeFactory.COMODI_NS, "changeType"),
+			model.createProperty (ChangeFactory.COMODI_NS, "hasChangeType"),
 			model.createResource (ChangeFactory.COMODI_NS + changeType.getTerm ())));
 		return this;
 	}
@@ -182,10 +182,10 @@ public class Change
 	 * @param target the target
 	 * @return this change
 	 */
-	public Change affected (ComodiTarget target)
+	public Change affects (ComodiTarget target)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeFactory.COMODI_NS, "affected"),
+			model.createProperty (ChangeFactory.COMODI_NS, "affects"),
 			model.createResource (ChangeFactory.COMODI_NS + target.getTerm ())));
 		return this;
 	}

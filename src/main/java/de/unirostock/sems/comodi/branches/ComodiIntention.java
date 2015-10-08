@@ -49,7 +49,7 @@ public class ComodiIntention
 	 * Gets the term representing a correction.
 	 * 
 	 * <pre>
-	 * Correction -> Intention
+	 * Correction -&gt; Intention
 	 * </pre>
 	 * 
 	 * @return the correction term
@@ -65,7 +65,7 @@ public class ComodiIntention
 	 * Gets the term representing an extension.
 	 * 
 	 * <pre>
-	 * Extension -> Intention
+	 * Extension -&gt; Intention
 	 * </pre>
 	 * 
 	 * @return the extension term
@@ -81,7 +81,7 @@ public class ComodiIntention
 	 * Gets the term representing a simplification.
 	 * 
 	 * <pre>
-	 * Simplification -> Intention
+	 * Simplification -&gt; Intention
 	 * </pre>
 	 * 
 	 * @return the simplification term

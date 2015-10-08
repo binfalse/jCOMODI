@@ -49,7 +49,7 @@ public class ComodiChangeType
 	 * Gets the term representing a deletion.
 	 * 
 	 * <pre>
-	 * Deletion -> Type
+	 * Deletion -&gt; Type
 	 * </pre>
 	 * 
 	 * @return the deletion term
@@ -65,7 +65,7 @@ public class ComodiChangeType
 	 * Gets the term representing an update.
 	 * 
 	 * <pre>
-	 * Update -> Type
+	 * Update -&gt; Type
 	 * </pre>
 	 * 
 	 * @return the update term
@@ -81,7 +81,7 @@ public class ComodiChangeType
 	 * Gets the term representing an update of an attribute value.
 	 * 
 	 * <pre>
-	 * AttributeValue -> Update -> Type
+	 * AttributeValue -&gt; Update -&gt; Type
 	 * </pre>
 	 * 
 	 * @return the attribute update term
@@ -98,7 +98,7 @@ public class ComodiChangeType
 	 * Gets the term representing a move.
 	 * 
 	 * <pre>
-	 * Move -> Type
+	 * Move -&gt; Type
 	 * </pre>
 	 * 
 	 * @return the move term
@@ -114,7 +114,7 @@ public class ComodiChangeType
 	 * Gets the term representing a permutation of entities.
 	 * 
 	 * <pre>
-	 * PermutationOfEntities -> Move -> Type
+	 * PermutationOfEntities -&gt; Move -&gt; Type
 	 * </pre>
 	 * 
 	 * @return the permutation of entities term
@@ -131,7 +131,7 @@ public class ComodiChangeType
 	 * Gets the term representing an insertion.
 	 * 
 	 * <pre>
-	 * Insertion -> Type
+	 * Insertion -&gt; Type
 	 * </pre>
 	 * 
 	 * @return the insertion term

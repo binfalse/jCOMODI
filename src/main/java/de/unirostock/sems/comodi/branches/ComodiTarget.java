@@ -49,7 +49,7 @@ public class ComodiTarget
 	 * Gets the term representing an annotation.
 	 * 
 	 * <pre>
-	 * Annotation -> Target
+	 * Annotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the annotation term
@@ -65,7 +65,7 @@ public class ComodiTarget
 	 * Gets the term representing a creation date.
 	 * 
 	 * <pre>
-	 * CreationDate -> Date -> Annotation -> Target
+	 * CreationDate -&gt; Date -&gt; Annotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the creation date term
@@ -81,7 +81,7 @@ public class ComodiTarget
 	 * Gets the term representing a modification date.
 	 * 
 	 * <pre>
-	 * ModificationDate -> Date -> Annotation -> Target
+	 * ModificationDate -&gt; Date -&gt; Annotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the modification date term
@@ -98,7 +98,7 @@ public class ComodiTarget
 	 * Gets the term representing a date.
 	 * 
 	 * <pre>
-	 * Date -> Annotation -> Target
+	 * Date -&gt; Annotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the date term
@@ -114,7 +114,7 @@ public class ComodiTarget
 	 * Gets the term representing an ontology link.
 	 * 
 	 * <pre>
-	 * OntologyLink -> Annotation -> Target
+	 * OntologyLink -&gt; Annotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the ontology link term
@@ -130,7 +130,7 @@ public class ComodiTarget
 	 * Gets the term representing a textual description.
 	 * 
 	 * <pre>
-	 * TextualDescription -> Annotation -> Target
+	 * TextualDescription -&gt; Annotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the textual description term
@@ -147,7 +147,7 @@ public class ComodiTarget
 	 * Gets the term representing a person.
 	 * 
 	 * <pre>
-	 *  Person-> Annotation -> Target
+	 * Person -&gt; Annotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the person term
@@ -163,7 +163,7 @@ public class ComodiTarget
 	 * Gets the term representing a contributor.
 	 * 
 	 * <pre>
-	 * Contributor -> Person -> Annotation -> Target
+	 * Contributor -&gt; Person -&gt; Annotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the contributor term
@@ -179,7 +179,7 @@ public class ComodiTarget
 	 * Gets the term representing a creator.
 	 * 
 	 * <pre>
-	 * Creator -> Contributor -> Person -> Annotation -> Target
+	 * Creator -&gt; Contributor -&gt; Person -&gt; Annotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the creator term
@@ -195,7 +195,7 @@ public class ComodiTarget
 	 * Gets the term representing an attribution.
 	 * 
 	 * <pre>
-	 * Attribution -> TextualDescription -> Annotation -> Target
+	 * Attribution -&gt; TextualDescription -&gt; Annotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the attribution term
@@ -211,7 +211,7 @@ public class ComodiTarget
 	 * Gets the term representing the document layout.
 	 * 
 	 * <pre>
-	 * DocumentLayout -> Target
+	 * DocumentLayout -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the document layout term
@@ -228,7 +228,7 @@ public class ComodiTarget
 	 * Gets the term representing an annotation scheme.
 	 * 
 	 * <pre>
-	 * AnnotationScheme -> DocumentLayout -> Target
+	 * AnnotationScheme -&gt; DocumentLayout -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the annotation scheme term
@@ -245,7 +245,7 @@ public class ComodiTarget
 	 * Gets the term representing an identifiers scheme.
 	 * 
 	 * <pre>
-	 * IdentifiersScheme -> DocumentLayout -> Target
+	 * IdentifiersScheme -&gt; DocumentLayout -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the identifiers scheme term
@@ -262,7 +262,7 @@ public class ComodiTarget
 	 * Gets the term representing the meta identifier.
 	 * 
 	 * <pre>
-	 * MetaIdentifier -> DocumentLayout -> Target
+	 * MetaIdentifier -&gt; DocumentLayout -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the meta identifier term
@@ -279,7 +279,7 @@ public class ComodiTarget
 	 * Gets the term representing a specification.
 	 * 
 	 * <pre>
-	 * Specification -> DocumentLayout -> Target
+	 * Specification -&gt; DocumentLayout -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the specification term
@@ -295,7 +295,7 @@ public class ComodiTarget
 	 * Gets the term representing the CellML specification.
 	 * 
 	 * <pre>
-	 * CellmlSpecification -> Specification -> DocumentLayout -> Target
+	 * CellmlSpecification -&gt; Specification -&gt; DocumentLayout -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the CellML specification term
@@ -312,7 +312,7 @@ public class ComodiTarget
 	 * Gets the term representing the SBML specification.
 	 * 
 	 * <pre>
-	 * SbmlSpecification -> Specification -> DocumentLayout -> Target
+	 * SbmlSpecification -&gt; Specification -&gt; DocumentLayout -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the SBML specification term
@@ -329,7 +329,7 @@ public class ComodiTarget
 	 * Gets the term representing an SBML level.
 	 * 
 	 * <pre>
-	 * SbmlLevel -> SbmlSpecification -> Specification -> DocumentLayout -> Target
+	 * SbmlLevel -&gt; SbmlSpecification -&gt; Specification -&gt; DocumentLayout -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the SBML level term
@@ -345,7 +345,7 @@ public class ComodiTarget
 	 * Gets the term representing an SBML version.
 	 * 
 	 * <pre>
-	 * SbmlVersion -> SbmlSpecification -> Specification -> DocumentLayout -> Target
+	 * SbmlVersion -&gt; SbmlSpecification -&gt; Specification -&gt; DocumentLayout -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the SBML version term
@@ -361,7 +361,7 @@ public class ComodiTarget
 	 * Gets the term representing the VCard scheme.
 	 * 
 	 * <pre>
-	 * VcardScheme -> DocumentLayout -> Target
+	 * VcardScheme -&gt; DocumentLayout -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the VCard scheme term
@@ -377,7 +377,7 @@ public class ComodiTarget
 	 * Gets the term representing the encoded system.
 	 * 
 	 * <pre>
-	 * EncodedSystem -> Target
+	 * EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the encoded system term
@@ -393,7 +393,7 @@ public class ComodiTarget
 	 * Gets the term representing the mathematical model.
 	 * 
 	 * <pre>
-	 * MathematicalModel -> EncodedSystem -> Target
+	 * MathematicalModel -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the mathematical model term
@@ -410,7 +410,7 @@ public class ComodiTarget
 	 * Gets the term representing a component definition.
 	 * 
 	 * <pre>
-	 * ComponentDefinition -> MathematicalModel -> EncodedSystem -> Target
+	 * ComponentDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the component definition term
@@ -427,7 +427,7 @@ public class ComodiTarget
 	 * Gets the term representing an event definition.
 	 * 
 	 * <pre>
-	 * EventDefinition -> MathematicalModel -> EncodedSystem -> Target
+	 * EventDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the event definition term
@@ -444,7 +444,7 @@ public class ComodiTarget
 	 * Gets the term representing a function definition.
 	 * 
 	 * <pre>
-	 * FunctionDefinition -> MathematicalModel -> EncodedSystem -> Target
+	 * FunctionDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the function definition term
@@ -461,7 +461,7 @@ public class ComodiTarget
 	 * Gets the term representing kinetics.
 	 * 
 	 * <pre>
-	 * Kinetics -> MathematicalModel -> EncodedSystem -> Target
+	 * Kinetics -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the kinetics term
@@ -477,7 +477,7 @@ public class ComodiTarget
 	 * Gets the term representing a parameter definition.
 	 * 
 	 * <pre>
-	 * ParameterDefinition -> MathematicalModel -> EncodedSystem -> Target
+	 * ParameterDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the parameter definition term
@@ -494,7 +494,7 @@ public class ComodiTarget
 	 * Gets the term representing a rule.
 	 * 
 	 * <pre>
-	 * Rules -> MathematicalModel -> EncodedSystem -> Target
+	 * Rules -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the rules term
@@ -510,7 +510,7 @@ public class ComodiTarget
 	 * Gets the term representing a species definition.
 	 * 
 	 * <pre>
-	 * SpeciesDefinition -> MathematicalModel -> EncodedSystem -> Target
+	 * SpeciesDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the species definition term
@@ -527,7 +527,7 @@ public class ComodiTarget
 	 * Gets the term representing an unit definition.
 	 * 
 	 * <pre>
-	 * UnitDefinition -> MathematicalModel -> EncodedSystem -> Target
+	 * UnitDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the unit definition term
@@ -544,7 +544,7 @@ public class ComodiTarget
 	 * Gets the term representing a variable definition.
 	 * 
 	 * <pre>
-	 * VariableDefinition -> MathematicalModel -> EncodedSystem -> Target
+	 * VariableDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the variable definition term
@@ -561,7 +561,7 @@ public class ComodiTarget
 	 * Gets the term representing the network.
 	 * 
 	 * <pre>
-	 * Network -> EncodedSystem -> Target
+	 * Network -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the network term
@@ -577,7 +577,7 @@ public class ComodiTarget
 	 * Gets the term representing the component hierarchy.
 	 * 
 	 * <pre>
-	 * ComponentHierarchy -> Network -> EncodedSystem -> Target
+	 * ComponentHierarchy -&gt; Network -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the component hierarchy term
@@ -594,7 +594,7 @@ public class ComodiTarget
 	 * Gets the term representing the reaction network.
 	 * 
 	 * <pre>
-	 * ReactionNetwork -> Network -> EncodedSystem -> Target
+	 * ReactionNetwork -&gt; Network -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the reaction network term
@@ -611,7 +611,7 @@ public class ComodiTarget
 	 * Gets the term representing a variable connections.
 	 * 
 	 * <pre>
-	 * VariableConnections -> Network -> EncodedSystem -> Target
+	 * VariableConnections -&gt; Network -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the variable connections term
@@ -628,7 +628,7 @@ public class ComodiTarget
 	 * Gets the term representing a reaction definition.
 	 * 
 	 * <pre>
-	 * ReactionDefinition -> ReactionNetwork -> Network -> EncodedSystem -> Target
+	 * ReactionDefinition -&gt; ReactionNetwork -&gt; Network -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the reaction definition term
@@ -645,7 +645,7 @@ public class ComodiTarget
 	 * Gets the term representing a reaction reversibility.
 	 * 
 	 * <pre>
-	 * ReactionReversibility -> ReactionDefinition -> ReactionNetwork -> Network -> EncodedSystem -> Target
+	 * ReactionReversibility -&gt; ReactionDefinition -&gt; ReactionNetwork -&gt; Network -&gt; EncodedSystem -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the reaction reversibility term

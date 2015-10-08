@@ -49,7 +49,7 @@ public class ComodiReason
 	 * Gets the term representing a typo.
 	 * 
 	 * <pre>
-	 * Typo -> Reason
+	 * Typo -&gt; Reason
 	 * </pre>
 	 * 
 	 * @return the typo term
@@ -65,7 +65,7 @@ public class ComodiReason
 	 * Gets the term representing a knowledge gain.
 	 * 
 	 * <pre>
-	 * KnowledgeGain -> Reason
+	 * KnowledgeGain -&gt; Reason
 	 * </pre>
 	 * 
 	 * @return the knowledge gain term
@@ -81,7 +81,7 @@ public class ComodiReason
 	 * Gets the term representing a mismatch with publication.
 	 * 
 	 * <pre>
-	 * MismatchWithPublication -> Reason
+	 * MismatchWithPublication -&gt; Reason
 	 * </pre>
 	 * 
 	 * @return the mismatch with publication term
@@ -98,7 +98,7 @@ public class ComodiReason
 	 * Gets the term representing a model curation.
 	 * 
 	 * <pre>
-	 * ModelCuration -> Reason
+	 * ModelCuration -&gt; Reason
 	 * </pre>
 	 * 
 	 * @return the model curation term

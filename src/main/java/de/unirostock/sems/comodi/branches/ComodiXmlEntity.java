@@ -49,7 +49,7 @@ public class ComodiXmlEntity
 	 * Gets the term representing an XML node.
 	 * 
 	 * <pre>
-	 * Node -> XmlEntity
+	 * Node -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the node term
@@ -65,7 +65,7 @@ public class ComodiXmlEntity
 	 * Gets the term representing an XML attribute.
 	 * 
 	 * <pre>
-	 * Attribute -> XmlEntity
+	 * Attribute -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the attribute term
@@ -82,7 +82,7 @@ public class ComodiXmlEntity
 	 * <code>id</code> attribute.
 	 * 
 	 * <pre>
-	 * Attribute -> XmlEntity
+	 * Attribute -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the entity identifier term
@@ -100,7 +100,7 @@ public class ComodiXmlEntity
 	 * For example the <code>&lt;model id=".."</code> in SBML models.
 	 * 
 	 * <pre>
-	 * ModelId -> Attribute -> XmlEntity
+	 * ModelId -&gt; Attribute -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the model id term
@@ -117,7 +117,7 @@ public class ComodiXmlEntity
 	 * attribute.
 	 * 
 	 * <pre>
-	 * EntityName -> Attribute -> XmlEntity
+	 * EntityName -&gt; Attribute -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the entity name term
@@ -134,7 +134,7 @@ public class ComodiXmlEntity
 	 * For example the <code>&lt;model name=".."</code> in SBML models.
 	 * 
 	 * <pre>
-	 * ModelName -> Attribute -> XmlEntity
+	 * ModelName -&gt; Attribute -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the model name term
@@ -150,7 +150,7 @@ public class ComodiXmlEntity
 	 * Gets the term representing an XML text node.
 	 * 
 	 * <pre>
-	 * Text -> XmlEntity
+	 * Text -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the text node term

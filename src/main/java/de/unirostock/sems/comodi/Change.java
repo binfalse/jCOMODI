@@ -198,10 +198,10 @@ public class Change
 	 * @param nodeId the id of the node that triggered this change
 	 * @return this change
 	 */
-	public Change triggeredBy (String nodeId)
+	public Change wasTriggeredBy (String nodeId)
 	{
 		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeFactory.COMODI_NS, "triggeredBy"),
+			model.createProperty (ChangeFactory.COMODI_NS, "wasTriggeredBy"),
 			model.createResource (baseUri.toString () + "#" + nodeId)));
 		return this;
 	}

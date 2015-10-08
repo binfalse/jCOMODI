@@ -130,9 +130,9 @@ public class ChangeFactory
 	}
 	
 	/**
-	 * Gets the rdf xml.
+	 * Compiles the assembled changes in an RDF/XML string.
 	 *
-	 * @return the rdf xml
+	 * @return the RDF/XML string
 	 */
 	public String getRdfXml ()
 	{
@@ -145,9 +145,9 @@ public class ChangeFactory
 	}
 	
 	/**
-	 * Gets the annotaions.
+	 * Gets the annotations.
 	 *
-	 * @return the annotaions
+	 * @return the annotations
 	 */
 	public Model getAnnotaions ()
 	{
@@ -159,7 +159,7 @@ public class ChangeFactory
 
 	
 	/**
-	 * Prints the ttl.
+	 * Prints the TURTLE serialisation to sysout. Basically for debugging purposes.
 	 */
 	public void printTtl ()
 	{
@@ -170,7 +170,7 @@ public class ChangeFactory
 	}
 	
 	/**
-	 * Prints the xml.
+	 * Prints the RDF/XML serialisation to sysout. Basically for debugging purposes.
 	 */
 	public void printXml ()
 	{

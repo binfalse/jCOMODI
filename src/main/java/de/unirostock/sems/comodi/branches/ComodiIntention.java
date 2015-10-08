@@ -24,7 +24,7 @@ import de.unirostock.sems.comodi.ComodiBranchTerm;
 
 
 /**
- * The Class ComodiIntention creating terms of COMODI's Intention branch..
+ * The Class ComodiIntention creating terms of COMODI's Intention branch.
  * 
  * @author Martin Scharm
  */

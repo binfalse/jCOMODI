@@ -24,15 +24,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.jdom2.Element;
 
 import de.unirostock.sems.comodi.branches.ComodiChangeType;
-import de.unirostock.sems.comodi.branches.ComodiXmlEntity;
 import de.unirostock.sems.comodi.branches.ComodiIntention;
 import de.unirostock.sems.comodi.branches.ComodiReason;
 import de.unirostock.sems.comodi.branches.ComodiTarget;
+import de.unirostock.sems.comodi.branches.ComodiXmlEntity;
 import de.unirostock.sems.xmlutils.ds.DocumentNode;
 
 
@@ -233,6 +235,20 @@ public class Change
 		statements.add (model.createStatement (this.subject,
 			model.createProperty (ChangeFactory.COMODI_NS, "wasTriggeredBy"),
 			model.createResource (baseUri.toString () + "#" + nodeId)));
+		return this;
+	}
+	
+	
+	/**
+	 * Adds another custom annotation describing this change.
+	 *
+	 * @param predicate the predicate
+	 * @param object the object
+	 * @return this change
+	 */
+	public Change addAnnotation (Property predicate, RDFNode object)
+	{
+		statements.add (model.createStatement (this.subject, predicate, object));
 		return this;
 	}
 	

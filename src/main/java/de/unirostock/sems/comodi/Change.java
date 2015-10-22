@@ -123,6 +123,7 @@ public class Change
 	 */
 	private void init (String nodeId, Model model, URI baseUri)
 	{
+		this.baseUri = baseUri;
 		this.model = model;
 		this.subject = model.createResource (baseUri.toString () + "#" + nodeId);
 		this.statements = new ArrayList<Statement> ();

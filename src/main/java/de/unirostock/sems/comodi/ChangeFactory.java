@@ -66,6 +66,9 @@ public class ChangeFactory
 	
 	/** The friend-of-a-friend namespace. */
 	public static final String	FOAF_NS		= "http://xmlns.com/foaf/0.1/";
+
+	/** The Open Archives Initiative Object Reuse and Exchange (OAI-ORE) namespace. */
+	public static final String	ORE_NS		= "http://www.openarchives.org/ore/terms/";
 	
 	/** The URI of the file containing the changes we'll be talking about. */
 	private URI									baseUri;
@@ -92,6 +95,7 @@ public class ChangeFactory
 		model.setNsPrefix ("foaf", FOAF_NS);
 		model.setNsPrefix ("prov", PROV_NS);
 		model.setNsPrefix ("pav", PAV_NS);
+		model.setNsPrefix ("ore", ORE_NS);
 		
 		changes = new ArrayList<Change> ();
 	}

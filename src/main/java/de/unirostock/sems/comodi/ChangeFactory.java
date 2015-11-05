@@ -52,6 +52,9 @@ public class ChangeFactory
 	/** The RDF namespace. */
 	public static final String	RDF_NS		= "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 	
+	/** The RDF schema namespace. */
+	public static final String	RDFS_NS		= "http://www.w3.org/2000/01/rdf-schema#";
+	
 	/** The namespace of COMODI. */
 	public static final String	COMODI_NS	= "http://purl.org/net/comodi#";
 	
@@ -60,6 +63,9 @@ public class ChangeFactory
 	
 	/** The PAV namespace. */
 	public static final String	PAV_NS		= "http://purl.org/pav/";
+	
+	/** The friend-of-a-friend namespace. */
+	public static final String	FOAF_NS		= "http://xmlns.com/foaf/0.1/";
 	
 	/** The URI of the file containing the changes we'll be talking about. */
 	private URI									baseUri;
@@ -82,6 +88,10 @@ public class ChangeFactory
 		
 		model.setNsPrefix ("comodi", COMODI_NS);
 		model.setNsPrefix ("rdf", RDF_NS);
+		model.setNsPrefix ("rdfs", RDFS_NS);
+		model.setNsPrefix ("foaf", FOAF_NS);
+		model.setNsPrefix ("prov", PROV_NS);
+		model.setNsPrefix ("pav", PAV_NS);
 		
 		changes = new ArrayList<Change> ();
 	}
@@ -96,6 +106,17 @@ public class ChangeFactory
 	public URI getBaseUri ()
 	{
 		return baseUri;
+	}
+	
+	
+	/**
+	 * Gets all registered changes.
+	 *
+	 * @return the changes
+	 */
+	public List<Change>	getChanges ()
+	{
+		return changes;
 	}
 	
 	

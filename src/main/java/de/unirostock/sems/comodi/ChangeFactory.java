@@ -81,6 +81,18 @@ public class ChangeFactory
 	}
 	
 	
+	
+	/**
+	 * Gets the base URI for entities in this patch.
+	 *
+	 * @return the base URI
+	 */
+	public URI getBaseUri ()
+	{
+		return baseUri;
+	}
+	
+	
 	/**
 	 * Gets the number of overall statements in all changes produced by this
 	 * change factory.

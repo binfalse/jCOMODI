@@ -134,6 +134,17 @@ public class Change
 	
 	
 	/**
+	 * Gets the change as an RDF resource. Might be useful if you want to use it in other annotations.
+	 *
+	 * @return the change as resource
+	 */
+	public Resource getChangeAsResource ()
+	{
+		return subject;
+	}
+	
+	
+	/**
 	 * Gets the RDF statements about this change.
 	 * 
 	 * @return the statements

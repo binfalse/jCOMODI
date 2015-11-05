@@ -55,6 +55,12 @@ public class ChangeFactory
 	/** The namespace of COMODI. */
 	public static final String	COMODI_NS	= "http://purl.org/net/comodi#";
 	
+	/** The PROV namespace. */
+	public static final String	PROV_NS		= "http://www.w3.org/ns/prov#";
+	
+	/** The PAV namespace. */
+	public static final String	PAV_NS		= "http://purl.org/pav/";
+	
 	/** The URI of the file containing the changes we'll be talking about. */
 	private URI									baseUri;
 	

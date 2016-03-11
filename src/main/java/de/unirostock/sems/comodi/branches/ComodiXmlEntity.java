@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with jCOMODI. If not, see <http://www.gnu.org/licenses/>.
  * 
- * @see <a href="http://purl.org/net/comodi">COMODI</a>
+ * @see <a href="http://purl.uni-rostock.de/comodi/">COMODI</a>
  */
 package de.unirostock.sems.comodi.branches;
 
@@ -27,7 +27,7 @@ import de.unirostock.sems.comodi.ComodiBranchTerm;
  * The Class ComodiXmlEntity creating terms of COMODI's XmlEntity branch.
  * 
  * @author Martin Scharm
- * @see <a href="http://purl.org/net/comodi#XmlEntity">XmlEntity definition</a>
+ * @see <a href="http://purl.uni-rostock.de/comodi/comodi#XmlEntity">XmlEntity definition</a>
  */
 public class ComodiXmlEntity
 	extends ComodiBranchTerm
@@ -53,7 +53,7 @@ public class ComodiXmlEntity
 	 * </pre>
 	 * 
 	 * @return the node term
-	 * @see <a href="http://purl.org/net/comodi#Node">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Node">term definition</a>
 	 */
 	public static ComodiXmlEntity getNode ()
 	{
@@ -69,7 +69,7 @@ public class ComodiXmlEntity
 	 * </pre>
 	 * 
 	 * @return the attribute term
-	 * @see <a href="http://purl.org/net/comodi#Attribute">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Attribute">term definition</a>
 	 */
 	public static ComodiXmlEntity getAttribute ()
 	{
@@ -86,7 +86,7 @@ public class ComodiXmlEntity
 	 * </pre>
 	 * 
 	 * @return the entity identifier term
-	 * @see <a href="http://purl.org/net/comodi#EntityIdentifier">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#EntityIdentifier">term
 	 *      definition</a>
 	 */
 	public static ComodiXmlEntity getEntityIdentifier ()
@@ -104,7 +104,7 @@ public class ComodiXmlEntity
 	 * </pre>
 	 * 
 	 * @return the model id term
-	 * @see <a href="http://purl.org/net/comodi#ModelId">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ModelId">term definition</a>
 	 */
 	public static ComodiXmlEntity getModelId ()
 	{
@@ -121,7 +121,7 @@ public class ComodiXmlEntity
 	 * </pre>
 	 * 
 	 * @return the entity name term
-	 * @see <a href="http://purl.org/net/comodi#EntityName">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#EntityName">term definition</a>
 	 */
 	public static ComodiXmlEntity getEntityName ()
 	{
@@ -138,7 +138,7 @@ public class ComodiXmlEntity
 	 * </pre>
 	 * 
 	 * @return the model name term
-	 * @see <a href="http://purl.org/net/comodi#ModelName">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ModelName">term definition</a>
 	 */
 	public static ComodiXmlEntity getModelName ()
 	{
@@ -154,7 +154,7 @@ public class ComodiXmlEntity
 	 * </pre>
 	 * 
 	 * @return the text node term
-	 * @see <a href="http://purl.org/net/comodi#Text">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Text">term definition</a>
 	 */
 	public static ComodiXmlEntity getText ()
 	{

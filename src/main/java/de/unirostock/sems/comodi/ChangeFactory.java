@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with jCOMODI. If not, see <http://www.gnu.org/licenses/>.
  * 
- * @see <a href="http://purl.org/net/comodi">COMODI</a>
+ * @see <a href="http://purl.uni-rostock.de/comodi/">COMODI</a>
  */
 package de.unirostock.sems.comodi;
 
@@ -74,7 +74,7 @@ public class ChangeFactory
 	public static final String	RDFS_NS		= "http://www.w3.org/2000/01/rdf-schema#";
 	
 	/** The namespace of COMODI. */
-	public static final String	COMODI_NS	= "http://purl.org/net/comodi#";
+	public static final String	COMODI_NS	= "http://purl.uni-rostock.de/comodi/comodi#";
 	
 	/** The PROV namespace. */
 	public static final String	PROV_NS		= "http://www.w3.org/ns/prov#";

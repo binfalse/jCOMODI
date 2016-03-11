@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with jCOMODI. If not, see <http://www.gnu.org/licenses/>.
  * 
- * @see <a href="http://purl.org/net/comodi">COMODI</a>
+ * @see <a href="http://purl.uni-rostock.de/comodi/">COMODI</a>
  */
 package de.unirostock.sems.comodi.branches;
 
@@ -27,7 +27,7 @@ import de.unirostock.sems.comodi.ComodiBranchTerm;
  * The Class ComodiReason creating terms of COMODI's Reason branch.
  * 
  * @author Martin Scharm
- * @see <a href="http://purl.org/net/comodi#Reason">Reason definition</a>
+ * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Reason">Reason definition</a>
  */
 public class ComodiReason
 	extends ComodiBranchTerm
@@ -53,7 +53,7 @@ public class ComodiReason
 	 * </pre>
 	 * 
 	 * @return the typo term
-	 * @see <a href="http://purl.org/net/comodi#Typo">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Typo">term definition</a>
 	 */
 	public static ComodiReason getTypo ()
 	{
@@ -69,7 +69,7 @@ public class ComodiReason
 	 * </pre>
 	 * 
 	 * @return the knowledge gain term
-	 * @see <a href="http://purl.org/net/comodi#KnowledgeGain">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#KnowledgeGain">term definition</a>
 	 */
 	public static ComodiReason getKnowledgeGain ()
 	{
@@ -85,7 +85,7 @@ public class ComodiReason
 	 * </pre>
 	 * 
 	 * @return the mismatch with publication term
-	 * @see <a href="http://purl.org/net/comodi#MismatchWithPublication">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#MismatchWithPublication">term
 	 *      definition</a>
 	 */
 	public static ComodiReason getMismatchWithPublication ()
@@ -102,7 +102,7 @@ public class ComodiReason
 	 * </pre>
 	 * 
 	 * @return the model curation term
-	 * @see <a href="http://purl.org/net/comodi#ModelCuration">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ModelCuration">term definition</a>
 	 */
 	public static ComodiReason getModelCuration ()
 	{

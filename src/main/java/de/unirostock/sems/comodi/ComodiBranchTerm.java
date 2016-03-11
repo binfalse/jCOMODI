@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with jCOMODI. If not, see <http://www.gnu.org/licenses/>.
  * 
- * @see <a href="http://purl.org/net/comodi">COMODI</a>
+ * @see <a href="http://purl.uni-rostock.de/comodi/">COMODI</a>
  */
 package de.unirostock.sems.comodi;
 

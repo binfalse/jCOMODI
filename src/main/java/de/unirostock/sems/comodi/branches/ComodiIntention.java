@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with jCOMODI. If not, see <http://www.gnu.org/licenses/>.
  * 
- * @see <a href="http://purl.org/net/comodi">COMODI</a>
+ * @see <a href="http://purl.uni-rostock.de/comodi/">COMODI</a>
  */
 package de.unirostock.sems.comodi.branches;
 
@@ -27,7 +27,7 @@ import de.unirostock.sems.comodi.ComodiBranchTerm;
  * The Class ComodiIntention creating terms of COMODI's Intention branch.
  * 
  * @author Martin Scharm
- * @see <a href="http://purl.org/net/comodi#Intention">Intention definition</a>
+ * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Intention">Intention definition</a>
  */
 public class ComodiIntention
 	extends ComodiBranchTerm
@@ -53,7 +53,7 @@ public class ComodiIntention
 	 * </pre>
 	 * 
 	 * @return the correction term
-	 * @see <a href="http://purl.org/net/comodi#Correction">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Correction">term definition</a>
 	 */
 	public static ComodiIntention getCorrection ()
 	{
@@ -69,7 +69,7 @@ public class ComodiIntention
 	 * </pre>
 	 * 
 	 * @return the extension term
-	 * @see <a href="http://purl.org/net/comodi#Extension">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Extension">term definition</a>
 	 */
 	public static ComodiIntention getExtension ()
 	{
@@ -85,7 +85,7 @@ public class ComodiIntention
 	 * </pre>
 	 * 
 	 * @return the simplification term
-	 * @see <a href="http://purl.org/net/comodi#Simplification">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Simplification">term
 	 *      definition</a>
 	 */
 	public static ComodiIntention getSimplification ()

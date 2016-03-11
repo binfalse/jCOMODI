@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with jCOMODI. If not, see <http://www.gnu.org/licenses/>.
  * 
- * @see <a href="http://purl.org/net/comodi">COMODI</a>
+ * @see <a href="http://purl.uni-rostock.de/comodi/">COMODI</a>
  */
 package de.unirostock.sems.comodi.branches;
 
@@ -27,7 +27,7 @@ import de.unirostock.sems.comodi.ComodiBranchTerm;
  * The Class ComodiTarget creating terms of COMODI's Target branch.
  * 
  * @author Martin Scharm
- * @see <a href="http://purl.org/net/comodi#Target">target definition</a>
+ * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Target">target definition</a>
  */
 public class ComodiTarget
 	extends ComodiBranchTerm
@@ -53,7 +53,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the annotation term
-	 * @see <a href="http://purl.org/net/comodi#Annotation">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Annotation">term definition</a>
 	 */
 	public static ComodiTarget getAnnotation ()
 	{
@@ -69,7 +69,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the creation date term
-	 * @see <a href="http://purl.org/net/comodi#CreationDate">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#CreationDate">term definition</a>
 	 */
 	public static ComodiTarget getCreationDate ()
 	{
@@ -85,7 +85,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the modification date term
-	 * @see <a href="http://purl.org/net/comodi#ModificationDate">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ModificationDate">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getModificationDate ()
@@ -102,7 +102,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the date term
-	 * @see <a href="http://purl.org/net/comodi#Date">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Date">term definition</a>
 	 */
 	public static ComodiTarget getDate ()
 	{
@@ -118,7 +118,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the ontology link term
-	 * @see <a href="http://purl.org/net/comodi#OntologyLink">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#OntologyLink">term definition</a>
 	 */
 	public static ComodiTarget getOntologyLink ()
 	{
@@ -134,7 +134,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the textual description term
-	 * @see <a href="http://purl.org/net/comodi#TextualDescription">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#TextualDescription">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getTextualDescription ()
@@ -151,7 +151,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the person term
-	 * @see <a href="http://purl.org/net/comodi#Person">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Person">term definition</a>
 	 */
 	public static ComodiTarget getPerson ()
 	{
@@ -167,7 +167,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the contributor term
-	 * @see <a href="http://purl.org/net/comodi#Contributor">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Contributor">term definition</a>
 	 */
 	public static ComodiTarget getContributor ()
 	{
@@ -183,7 +183,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the creator term
-	 * @see <a href="http://purl.org/net/comodi#Creator">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Creator">term definition</a>
 	 */
 	public static ComodiTarget getCreator ()
 	{
@@ -199,7 +199,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the attribution term
-	 * @see <a href="http://purl.org/net/comodi#Attribution">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Attribution">term definition</a>
 	 */
 	public static ComodiTarget getAttribution ()
 	{
@@ -215,7 +215,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the document layout term
-	 * @see <a href="http://purl.org/net/comodi#DocumentLayout">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#DocumentLayout">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getDocumentLayout ()
@@ -232,7 +232,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the annotation scheme term
-	 * @see <a href="http://purl.org/net/comodi#AnnotationScheme">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#AnnotationScheme">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getAnnotationScheme ()
@@ -249,7 +249,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the identifiers scheme term
-	 * @see <a href="http://purl.org/net/comodi#IdentifiersScheme">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#IdentifiersScheme">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getIdentifiersScheme ()
@@ -266,7 +266,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the meta identifier term
-	 * @see <a href="http://purl.org/net/comodi#MetaIdentifier">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#MetaIdentifier">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getMetaIdentifier ()
@@ -283,7 +283,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the specification term
-	 * @see <a href="http://purl.org/net/comodi#Specification">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Specification">term definition</a>
 	 */
 	public static ComodiTarget getSpecification ()
 	{
@@ -299,7 +299,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the CellML specification term
-	 * @see <a href="http://purl.org/net/comodi#CellmlSpecification">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#CellmlSpecification">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getCellmlSpecification ()
@@ -316,7 +316,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the SBML specification term
-	 * @see <a href="http://purl.org/net/comodi#SbmlSpecification">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#SbmlSpecification">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getSbmlSpecification ()
@@ -333,7 +333,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the SBML level term
-	 * @see <a href="http://purl.org/net/comodi#SbmlLevel">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#SbmlLevel">term definition</a>
 	 */
 	public static ComodiTarget getSbmlLevel ()
 	{
@@ -349,7 +349,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the SBML version term
-	 * @see <a href="http://purl.org/net/comodi#SbmlVersion">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#SbmlVersion">term definition</a>
 	 */
 	public static ComodiTarget getSbmlVersion ()
 	{
@@ -365,7 +365,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the VCard scheme term
-	 * @see <a href="http://purl.org/net/comodi#VcardScheme">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#VcardScheme">term definition</a>
 	 */
 	public static ComodiTarget getVcardScheme ()
 	{
@@ -381,7 +381,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the encoded system term
-	 * @see <a href="http://purl.org/net/comodi#EncodedSystem">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#EncodedSystem">term definition</a>
 	 */
 	public static ComodiTarget getEncodedSystem ()
 	{
@@ -397,7 +397,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the mathematical model term
-	 * @see <a href="http://purl.org/net/comodi#MathematicalModel">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#MathematicalModel">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getMathematicalModel ()
@@ -414,7 +414,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the component definition term
-	 * @see <a href="http://purl.org/net/comodi#ComponentDefinition">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ComponentDefinition">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getComponentDefinition ()
@@ -431,7 +431,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the event definition term
-	 * @see <a href="http://purl.org/net/comodi#EventDefinition">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#EventDefinition">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getEventDefinition ()
@@ -448,7 +448,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the function definition term
-	 * @see <a href="http://purl.org/net/comodi#FunctionDefinition">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#FunctionDefinition">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getFunctionDefinition ()
@@ -465,7 +465,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the kinetics term
-	 * @see <a href="http://purl.org/net/comodi#Kinetics">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Kinetics">term definition</a>
 	 */
 	public static ComodiTarget getKinetics ()
 	{
@@ -481,7 +481,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the parameter definition term
-	 * @see <a href="http://purl.org/net/comodi#ParameterDefinition">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ParameterDefinition">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getParameterDefinition ()
@@ -498,7 +498,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the rules term
-	 * @see <a href="http://purl.org/net/comodi#Rules">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Rules">term definition</a>
 	 */
 	public static ComodiTarget getRules ()
 	{
@@ -514,7 +514,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the species definition term
-	 * @see <a href="http://purl.org/net/comodi#SpeciesDefinition">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#SpeciesDefinition">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getSpeciesDefinition ()
@@ -531,7 +531,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the unit definition term
-	 * @see <a href="http://purl.org/net/comodi#UnitDefinition">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#UnitDefinition">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getUnitDefinition ()
@@ -548,7 +548,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the variable definition term
-	 * @see <a href="http://purl.org/net/comodi#VariableDefinition">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#VariableDefinition">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getVariableDefinition ()
@@ -565,7 +565,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the network term
-	 * @see <a href="http://purl.org/net/comodi#Network">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Network">term definition</a>
 	 */
 	public static ComodiTarget getNetwork ()
 	{
@@ -581,7 +581,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the component hierarchy term
-	 * @see <a href="http://purl.org/net/comodi#ComponentHierarchy">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ComponentHierarchy">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getComponentHierarchy ()
@@ -598,7 +598,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the reaction network term
-	 * @see <a href="http://purl.org/net/comodi#ReactionNetwork">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ReactionNetwork">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getReactionNetwork ()
@@ -615,7 +615,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the variable connections term
-	 * @see <a href="http://purl.org/net/comodi#VariableConnections">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#VariableConnections">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getVariableConnections ()
@@ -632,7 +632,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the reaction definition term
-	 * @see <a href="http://purl.org/net/comodi#ReactionDefinition">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ReactionDefinition">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getReactionDefinition ()
@@ -649,7 +649,7 @@ public class ComodiTarget
 	 * </pre>
 	 * 
 	 * @return the reaction reversibility term
-	 * @see <a href="http://purl.org/net/comodi#ReactionReversibility">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ReactionReversibility">term
 	 *      definition</a>
 	 */
 	public static ComodiTarget getReactionReversibility ()

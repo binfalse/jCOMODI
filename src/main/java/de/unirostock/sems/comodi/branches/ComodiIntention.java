@@ -62,18 +62,52 @@ public class ComodiIntention
 	
 	
 	/**
-	 * Gets the term representing an extension.
+	 * Gets the term representing an expansion.
 	 * 
 	 * <pre>
-	 * Extension -&gt; Intention
+	 * Expansion -&gt; Intention
 	 * </pre>
 	 * 
 	 * @return the extension term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Extension">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Expansion">term definition</a>
 	 */
-	public static ComodiIntention getExtension ()
+	public static ComodiIntention getExpansion ()
 	{
-		return new ComodiIntention ("Extension");
+		return new ComodiIntention ("Expansion");
+	}
+	
+	
+	/**
+	 * Gets the term representing a merge.
+	 * 
+	 * <pre>
+	 * Merge -&gt; Expansion -&gt; Intention
+	 * </pre>
+	 * 
+	 * @return the simplification term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Merge">term
+	 *      definition</a>
+	 */
+	public static ComodiIntention getMerge()
+	{
+		return new ComodiIntention ("Merge");
+	}
+	
+	
+	/**
+	 * Gets the term representing a elaboration.
+	 * 
+	 * <pre>
+	 * Elaboration -&gt; Intention
+	 * </pre>
+	 * 
+	 * @return the simplification term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Elaboration">term
+	 *      definition</a>
+	 */
+	public static ComodiIntention getElaboration ()
+	{
+		return new ComodiIntention ("Elaboration");
 	}
 	
 	
@@ -91,6 +125,23 @@ public class ComodiIntention
 	public static ComodiIntention getSimplification ()
 	{
 		return new ComodiIntention ("Simplification");
+	}
+	
+	
+	/**
+	 * Gets the term representing a trial of something.
+	 * 
+	 * <pre>
+	 * Trial -&gt; Intention
+	 * </pre>
+	 * 
+	 * @return the simplification term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Trial">term
+	 *      definition</a>
+	 */
+	public static ComodiIntention getTrial ()
+	{
+		return new ComodiIntention ("Trial");
 	}
 	
 }

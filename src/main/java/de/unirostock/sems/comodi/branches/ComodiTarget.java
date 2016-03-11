@@ -46,18 +46,18 @@ public class ComodiTarget
 	
 	
 	/**
-	 * Gets the term representing an annotation.
+	 * Gets the term representing the annotation layer of a model document.
 	 * 
 	 * <pre>
-	 * Annotation -&gt; Target
+	 * ModelAnnotation -&gt; Target
 	 * </pre>
 	 * 
-	 * @return the annotation term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Annotation">term definition</a>
+	 * @return the model annotation term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ModelAnnotation">term definition</a>
 	 */
-	public static ComodiTarget getAnnotation ()
+	public static ComodiTarget getModelAnnotation ()
 	{
-		return new ComodiTarget ("Annotation");
+		return new ComodiTarget ("ModelAnnotation");
 	}
 	
 	
@@ -65,7 +65,7 @@ public class ComodiTarget
 	 * Gets the term representing a creation date.
 	 * 
 	 * <pre>
-	 * CreationDate -&gt; Date -&gt; Annotation -&gt; Target
+	 * CreationDate -&gt; Date -&gt; ModelAnnotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the creation date term
@@ -81,7 +81,7 @@ public class ComodiTarget
 	 * Gets the term representing a modification date.
 	 * 
 	 * <pre>
-	 * ModificationDate -&gt; Date -&gt; Annotation -&gt; Target
+	 * ModificationDate -&gt; Date -&gt; ModelAnnotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the modification date term
@@ -98,7 +98,7 @@ public class ComodiTarget
 	 * Gets the term representing a date.
 	 * 
 	 * <pre>
-	 * Date -&gt; Annotation -&gt; Target
+	 * Date -&gt; ModelAnnotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the date term
@@ -111,18 +111,18 @@ public class ComodiTarget
 	
 	
 	/**
-	 * Gets the term representing an ontology link.
+	 * Gets the term representing an ontology reference.
 	 * 
 	 * <pre>
-	 * OntologyLink -&gt; Annotation -&gt; Target
+	 * OntologyReference -&gt; ModelAnnotation -&gt; Target
 	 * </pre>
 	 * 
-	 * @return the ontology link term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#OntologyLink">term definition</a>
+	 * @return the ontology reference term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#OntologyReference">term definition</a>
 	 */
-	public static ComodiTarget getOntologyLink ()
+	public static ComodiTarget getOntologyReference ()
 	{
-		return new ComodiTarget ("OntologyLink");
+		return new ComodiTarget ("OntologyReference");
 	}
 	
 	
@@ -130,7 +130,7 @@ public class ComodiTarget
 	 * Gets the term representing a textual description.
 	 * 
 	 * <pre>
-	 * TextualDescription -&gt; Annotation -&gt; Target
+	 * TextualDescription -&gt; ModelAnnotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the textual description term
@@ -147,7 +147,7 @@ public class ComodiTarget
 	 * Gets the term representing a person.
 	 * 
 	 * <pre>
-	 * Person -&gt; Annotation -&gt; Target
+	 * Person -&gt; ModelAnnotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the person term
@@ -163,7 +163,7 @@ public class ComodiTarget
 	 * Gets the term representing a contributor.
 	 * 
 	 * <pre>
-	 * Contributor -&gt; Person -&gt; Annotation -&gt; Target
+	 * Contributor -&gt; Person -&gt; ModelAnnotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the contributor term
@@ -179,7 +179,7 @@ public class ComodiTarget
 	 * Gets the term representing a creator.
 	 * 
 	 * <pre>
-	 * Creator -&gt; Contributor -&gt; Person -&gt; Annotation -&gt; Target
+	 * Creator -&gt; Contributor -&gt; Person -&gt; ModelAnnotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the creator term
@@ -195,7 +195,7 @@ public class ComodiTarget
 	 * Gets the term representing an attribution.
 	 * 
 	 * <pre>
-	 * Attribution -&gt; TextualDescription -&gt; Annotation -&gt; Target
+	 * Attribution -&gt; TextualDescription -&gt; ModelAnnotation -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the attribution term
@@ -211,16 +211,16 @@ public class ComodiTarget
 	 * Gets the term representing the document layout.
 	 * 
 	 * <pre>
-	 * DocumentLayout -&gt; Target
+	 * ModelEncoding -&gt; Target
 	 * </pre>
 	 * 
-	 * @return the document layout term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#DocumentLayout">term
+	 * @return the model encoding term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ModelEncoding">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getDocumentLayout ()
+	public static ComodiTarget getModelEncoding ()
 	{
-		return new ComodiTarget ("DocumentLayout");
+		return new ComodiTarget ("ModelEncoding");
 	}
 	
 	
@@ -228,16 +228,16 @@ public class ComodiTarget
 	 * Gets the term representing an annotation scheme.
 	 * 
 	 * <pre>
-	 * AnnotationScheme -&gt; DocumentLayout -&gt; Target
+	 * AnnotationEncoding -&gt; ModelEncoding -&gt; Target
 	 * </pre>
 	 * 
-	 * @return the annotation scheme term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#AnnotationScheme">term
+	 * @return the annotation encoding term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#AnnotationEncoding">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getAnnotationScheme ()
+	public static ComodiTarget getAnnotationEncoding ()
 	{
-		return new ComodiTarget ("AnnotationScheme");
+		return new ComodiTarget ("AnnotationEncoding");
 	}
 	
 	
@@ -245,16 +245,16 @@ public class ComodiTarget
 	 * Gets the term representing an identifiers scheme.
 	 * 
 	 * <pre>
-	 * IdentifiersScheme -&gt; DocumentLayout -&gt; Target
+	 * IdentifierEncoding -&gt; ModelEncoding -&gt; Target
 	 * </pre>
 	 * 
-	 * @return the identifiers scheme term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#IdentifiersScheme">term
+	 * @return the identifier encoding term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#IdentifierEncoding">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getIdentifiersScheme ()
+	public static ComodiTarget getIdentifierEncoding ()
 	{
-		return new ComodiTarget ("IdentifiersScheme");
+		return new ComodiTarget ("IdentifierEncoding");
 	}
 	
 	
@@ -262,98 +262,16 @@ public class ComodiTarget
 	 * Gets the term representing the meta identifier.
 	 * 
 	 * <pre>
-	 * MetaIdentifier -&gt; DocumentLayout -&gt; Target
+	 * MetaIdEncoding -&gt; IdentifierEncoding -&gt; ModelEncoding -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the meta identifier term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#MetaIdentifier">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#MetaIdEncoding">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getMetaIdentifier ()
+	public static ComodiTarget getMetaIdEncoding ()
 	{
-		return new ComodiTarget ("MetaIdentifier");
-	}
-	
-	
-	/**
-	 * Gets the term representing a specification.
-	 * 
-	 * <pre>
-	 * Specification -&gt; DocumentLayout -&gt; Target
-	 * </pre>
-	 * 
-	 * @return the specification term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Specification">term definition</a>
-	 */
-	public static ComodiTarget getSpecification ()
-	{
-		return new ComodiTarget ("Specification");
-	}
-	
-	
-	/**
-	 * Gets the term representing the CellML specification.
-	 * 
-	 * <pre>
-	 * CellmlSpecification -&gt; Specification -&gt; DocumentLayout -&gt; Target
-	 * </pre>
-	 * 
-	 * @return the CellML specification term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#CellmlSpecification">term
-	 *      definition</a>
-	 */
-	public static ComodiTarget getCellmlSpecification ()
-	{
-		return new ComodiTarget ("CellmlSpecification");
-	}
-	
-	
-	/**
-	 * Gets the term representing the SBML specification.
-	 * 
-	 * <pre>
-	 * SbmlSpecification -&gt; Specification -&gt; DocumentLayout -&gt; Target
-	 * </pre>
-	 * 
-	 * @return the SBML specification term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#SbmlSpecification">term
-	 *      definition</a>
-	 */
-	public static ComodiTarget getSbmlSpecification ()
-	{
-		return new ComodiTarget ("SbmlSpecification");
-	}
-	
-	
-	/**
-	 * Gets the term representing an SBML level.
-	 * 
-	 * <pre>
-	 * SbmlLevel -&gt; SbmlSpecification -&gt; Specification -&gt; DocumentLayout -&gt; Target
-	 * </pre>
-	 * 
-	 * @return the SBML level term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#SbmlLevel">term definition</a>
-	 */
-	public static ComodiTarget getSbmlLevel ()
-	{
-		return new ComodiTarget ("SbmlLevel");
-	}
-	
-	
-	/**
-	 * Gets the term representing an SBML version.
-	 * 
-	 * <pre>
-	 * SbmlVersion -&gt; SbmlSpecification -&gt; Specification -&gt; DocumentLayout -&gt; Target
-	 * </pre>
-	 * 
-	 * @return the SBML version term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#SbmlVersion">term definition</a>
-	 */
-	public static ComodiTarget getSbmlVersion ()
-	{
-		return new ComodiTarget ("SbmlVersion");
+		return new ComodiTarget ("MetaIdEncoding");
 	}
 	
 	
@@ -361,48 +279,142 @@ public class ComodiTarget
 	 * Gets the term representing the VCard scheme.
 	 * 
 	 * <pre>
-	 * VcardScheme -&gt; DocumentLayout -&gt; Target
+	 * VcardEncoding -&gt; AnnotationEncoding -&gt; ModelEncoding -&gt; Target
 	 * </pre>
 	 * 
-	 * @return the VCard scheme term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#VcardScheme">term definition</a>
+	 * @return the VCard encoding term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#VcardEncoding">term definition</a>
 	 */
-	public static ComodiTarget getVcardScheme ()
+	public static ComodiTarget getVcardEncoding ()
 	{
-		return new ComodiTarget ("VcardScheme");
+		return new ComodiTarget ("VcardEncoding");
 	}
 	
 	
 	/**
-	 * Gets the term representing the encoded system.
+	 * Gets the term representing the behaviour of the encoded system.
 	 * 
 	 * <pre>
-	 * EncodedSystem -&gt; Target
+	 * ModelBehaviour -&gt; Target
+	 * </pre>
+	 * 
+	 * @return the model behaviour term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ModelBehaviour">term definition</a>
+	 */
+	public static ComodiTarget getModelBehaviour ()
+	{
+		return new ComodiTarget ("ModelBehaviour");
+	}
+	
+	
+	/**
+	 * Gets the term representing the setup of the encoded system.
+	 * 
+	 * <pre>
+	 * ModelSetup -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the encoded system term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#EncodedSystem">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ModelSetup">term definition</a>
 	 */
-	public static ComodiTarget getEncodedSystem ()
+	public static ComodiTarget getModelSetup ()
 	{
-		return new ComodiTarget ("EncodedSystem");
+		return new ComodiTarget ("ModelSetup");
 	}
+	
+	
+	/**
+	 * Gets the term representing the setup of a variable.
+	 * 
+	 * <pre>
+	 * VariableSetup -&gt; ModelSetup -&gt; Target
+	 * </pre>
+	 * 
+	 * @return the variable setup term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#VariableSetup">term
+	 *      definition</a>
+	 */
+	public static ComodiTarget getVariableSetup ()
+	{
+		return new ComodiTarget ("VariableSetup");
+	}
+	
+	
+	/**
+	 * Gets the term representing the setup of a species.
+	 * 
+	 * <pre>
+	 * SpeciesSetup -&gt; ModelSetup -&gt; Target
+	 * </pre>
+	 * 
+	 * @return the species setup term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#SpeciesSetup">term
+	 *      definition</a>
+	 */
+	public static ComodiTarget getSpeciesDefinition ()
+	{
+		return new ComodiTarget ("SpeciesSetup");
+	}
+	
+	
+	/**
+	 * Gets the term representing the setup of a parameter.
+	 * 
+	 * <pre>
+	 * ParameterSetup -&gt; ModelSetup -&gt; Target
+	 * </pre>
+	 * 
+	 * @return the parameter setup term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ParameterSetup">term
+	 *      definition</a>
+	 */
+	public static ComodiTarget getParameterDefinition ()
+	{
+		return new ComodiTarget ("ParameterSetup");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/**
+	 * Gets the term representing the definition of the actual system.
+	 * 
+	 * <pre>
+	 * ModelDefinition -&gt; Target
+	 * </pre>
+	 * 
+	 * @return the encoded system term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ModelDefinition">term definition</a>
+	 */
+	public static ComodiTarget getModelDefinition ()
+	{
+		return new ComodiTarget ("ModelDefinition");
+	}
+	
+	
+	
 	
 	
 	/**
 	 * Gets the term representing the mathematical model.
 	 * 
 	 * <pre>
-	 * MathematicalModel -&gt; EncodedSystem -&gt; Target
+	 * MathematicalModelDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the mathematical model term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#MathematicalModel">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#MathematicalModelDefinition">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getMathematicalModel ()
+	public static ComodiTarget getMathematicalModelDefinition ()
 	{
-		return new ComodiTarget ("MathematicalModel");
+		return new ComodiTarget ("MathematicalModelDefinition");
 	}
 	
 	
@@ -410,7 +422,7 @@ public class ComodiTarget
 	 * Gets the term representing a component definition.
 	 * 
 	 * <pre>
-	 * ComponentDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
+	 * ComponentDefinition -&gt; MathematicalModelDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the component definition term
@@ -427,7 +439,7 @@ public class ComodiTarget
 	 * Gets the term representing an event definition.
 	 * 
 	 * <pre>
-	 * EventDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
+	 * EventDefinition -&gt; MathematicalModelDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the event definition term
@@ -444,7 +456,7 @@ public class ComodiTarget
 	 * Gets the term representing a function definition.
 	 * 
 	 * <pre>
-	 * FunctionDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
+	 * FunctionDefinition -&gt; MathematicalModelDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the function definition term
@@ -458,68 +470,34 @@ public class ComodiTarget
 	
 	
 	/**
-	 * Gets the term representing kinetics.
+	 * Gets the term representing defintion of some kinetics.
 	 * 
 	 * <pre>
-	 * Kinetics -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
+	 * KineticsDefinition -&gt; MathematicalModelDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
-	 * @return the kinetics term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Kinetics">term definition</a>
+	 * @return the kinetics definition term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#KineticsDefinition">term definition</a>
 	 */
-	public static ComodiTarget getKinetics ()
+	public static ComodiTarget getKineticsDefinition ()
 	{
-		return new ComodiTarget ("Kinetics");
+		return new ComodiTarget ("KineticsDefinition");
 	}
 	
 	
 	/**
-	 * Gets the term representing a parameter definition.
+	 * Gets the term representing a rule definition.
 	 * 
 	 * <pre>
-	 * ParameterDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
+	 * RuleDefinition -&gt; MathematicalModelDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
-	 * @return the parameter definition term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ParameterDefinition">term
-	 *      definition</a>
+	 * @return the rule definition term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#RuleDefinition">term definition</a>
 	 */
-	public static ComodiTarget getParameterDefinition ()
+	public static ComodiTarget getRuleDefinition ()
 	{
-		return new ComodiTarget ("ParameterDefinition");
-	}
-	
-	
-	/**
-	 * Gets the term representing a rule.
-	 * 
-	 * <pre>
-	 * Rules -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
-	 * </pre>
-	 * 
-	 * @return the rules term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Rules">term definition</a>
-	 */
-	public static ComodiTarget getRules ()
-	{
-		return new ComodiTarget ("Rules");
-	}
-	
-	
-	/**
-	 * Gets the term representing a species definition.
-	 * 
-	 * <pre>
-	 * SpeciesDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
-	 * </pre>
-	 * 
-	 * @return the species definition term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#SpeciesDefinition">term
-	 *      definition</a>
-	 */
-	public static ComodiTarget getSpeciesDefinition ()
-	{
-		return new ComodiTarget ("SpeciesDefinition");
+		return new ComodiTarget ("RuleDefinition");
 	}
 	
 	
@@ -527,7 +505,7 @@ public class ComodiTarget
 	 * Gets the term representing an unit definition.
 	 * 
 	 * <pre>
-	 * UnitDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
+	 * UnitDefinition -&gt; MathematicalModelDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the unit definition term
@@ -541,52 +519,35 @@ public class ComodiTarget
 	
 	
 	/**
-	 * Gets the term representing a variable definition.
+	 * Gets the term representing the network definition.
 	 * 
 	 * <pre>
-	 * VariableDefinition -&gt; MathematicalModel -&gt; EncodedSystem -&gt; Target
+	 * NetworkDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
-	 * @return the variable definition term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#VariableDefinition">term
-	 *      definition</a>
+	 * @return the network definition term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#NetworkDefinition">term definition</a>
 	 */
-	public static ComodiTarget getVariableDefinition ()
+	public static ComodiTarget getNetworkDefinition ()
 	{
-		return new ComodiTarget ("VariableDefinition");
+		return new ComodiTarget ("NetworkDefinition");
 	}
 	
 	
 	/**
-	 * Gets the term representing the network.
+	 * Gets the term representing the hierarchy of, eg., components or compartments.
 	 * 
 	 * <pre>
-	 * Network -&gt; EncodedSystem -&gt; Target
+	 * HierarchyDefinition -&gt; NetworkDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
-	 * @return the network term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Network">term definition</a>
-	 */
-	public static ComodiTarget getNetwork ()
-	{
-		return new ComodiTarget ("Network");
-	}
-	
-	
-	/**
-	 * Gets the term representing the component hierarchy.
-	 * 
-	 * <pre>
-	 * ComponentHierarchy -&gt; Network -&gt; EncodedSystem -&gt; Target
-	 * </pre>
-	 * 
-	 * @return the component hierarchy term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ComponentHierarchy">term
+	 * @return the hierarchy definition term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#HierarchyDefinition">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getComponentHierarchy ()
+	public static ComodiTarget getHierarchyDefinition ()
 	{
-		return new ComodiTarget ("ComponentHierarchy");
+		return new ComodiTarget ("HierarchyDefinition");
 	}
 	
 	
@@ -594,16 +555,16 @@ public class ComodiTarget
 	 * Gets the term representing the reaction network.
 	 * 
 	 * <pre>
-	 * ReactionNetwork -&gt; Network -&gt; EncodedSystem -&gt; Target
+	 * ReactionNetworkDefinition -&gt; NetworkDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the reaction network term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ReactionNetwork">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ReactionNetworkDefinition">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getReactionNetwork ()
+	public static ComodiTarget getReactionNetworkDefinition ()
 	{
-		return new ComodiTarget ("ReactionNetwork");
+		return new ComodiTarget ("ReactionNetworkDefinition");
 	}
 	
 	
@@ -611,16 +572,16 @@ public class ComodiTarget
 	 * Gets the term representing a variable connections.
 	 * 
 	 * <pre>
-	 * VariableConnections -&gt; Network -&gt; EncodedSystem -&gt; Target
+	 * VariableConnectionDefinition -&gt; NetworkDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the variable connections term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#VariableConnections">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#VariableConnectionDefinition">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getVariableConnections ()
+	public static ComodiTarget getVariableConnectionDefinition ()
 	{
-		return new ComodiTarget ("VariableConnections");
+		return new ComodiTarget ("VariableConnectionDefinition");
 	}
 	
 	
@@ -628,7 +589,7 @@ public class ComodiTarget
 	 * Gets the term representing a reaction definition.
 	 * 
 	 * <pre>
-	 * ReactionDefinition -&gt; ReactionNetwork -&gt; Network -&gt; EncodedSystem -&gt; Target
+	 * ReactionDefinition -&gt; ReactionNetworkDefinition -&gt; NetworkDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the reaction definition term
@@ -645,16 +606,50 @@ public class ComodiTarget
 	 * Gets the term representing a reaction reversibility.
 	 * 
 	 * <pre>
-	 * ReactionReversibility -&gt; ReactionDefinition -&gt; ReactionNetwork -&gt; Network -&gt; EncodedSystem -&gt; Target
+	 * ReversibilityDefinition -&gt; ReactionDefinition -&gt; ReactionNetworkDefinition -&gt; NetworkDefinition -&gt; ModelDefinition -&gt; Target
 	 * </pre>
 	 * 
 	 * @return the reaction reversibility term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ReactionReversibility">term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ReversibilityDefinition">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getReactionReversibility ()
+	public static ComodiTarget getReversibilityDefinition ()
 	{
-		return new ComodiTarget ("ReactionReversibility");
+		return new ComodiTarget ("ReversibilityDefinition");
+	}
+	
+	
+	/**
+	 * Gets the term representing a participant in the reaction network.
+	 * 
+	 * <pre>
+	 * ParticipantDefinition -&gt; ReactionNetworkDefinition -&gt; NetworkDefinition -&gt; ModelDefinition -&gt; Target
+	 * </pre>
+	 * 
+	 * @return the participant term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ParticipantDefinition">term
+	 *      definition</a>
+	 */
+	public static ComodiTarget getParticipantDefinition ()
+	{
+		return new ComodiTarget ("ParticipantDefinition");
+	}
+	
+	
+	/**
+	 * Gets the term representing a port definition.
+	 * 
+	 * <pre>
+	 * PortDefinition -&gt; NetworkDefinition -&gt; ModelDefinition -&gt; Target
+	 * </pre>
+	 * 
+	 * @return the port definition term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#PortDefinition">term
+	 *      definition</a>
+	 */
+	public static ComodiTarget getPortDefinition ()
+	{
+		return new ComodiTarget ("PortDefinition");
 	}
 	
 }

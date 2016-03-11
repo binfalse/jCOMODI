@@ -69,7 +69,7 @@ public class ComodiTest
 				.hasIntention (ComodiIntention.getCorrection ())
 				.hasReason (ComodiReason.getModelCuration ())
 				.affects (ComodiTarget.getParameterDefinition ())
-				.affects (ComodiTarget.getKinetics ());
+				.affects (ComodiTarget.getKineticsDefinition ());
 			
 			String xml = cb.getRdfXml ();
 			// xml = xml.replaceAll ("file://bives.patch", "");

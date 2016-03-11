@@ -49,15 +49,15 @@ public class ComodiXmlEntity
 	 * Gets the term representing an XML node.
 	 * 
 	 * <pre>
-	 * Node -&gt; XmlEntity
+	 * XmlNode -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the node term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Node">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#XmlNode">term definition</a>
 	 */
 	public static ComodiXmlEntity getNode ()
 	{
-		return new ComodiXmlEntity ("Node");
+		return new ComodiXmlEntity ("XmlNode");
 	}
 	
 	
@@ -65,15 +65,15 @@ public class ComodiXmlEntity
 	 * Gets the term representing an XML attribute.
 	 * 
 	 * <pre>
-	 * Attribute -&gt; XmlEntity
+	 * XmlAttribute -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the attribute term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Attribute">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#XmlAttribute">term definition</a>
 	 */
 	public static ComodiXmlEntity getAttribute ()
 	{
-		return new ComodiXmlEntity ("Attribute");
+		return new ComodiXmlEntity ("XmlAttribute");
 	}
 	
 	
@@ -82,7 +82,7 @@ public class ComodiXmlEntity
 	 * <code>id</code> attribute.
 	 * 
 	 * <pre>
-	 * Attribute -&gt; XmlEntity
+	 * EntityIdentifier -&gt; XmlAttribute -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the entity identifier term
@@ -100,7 +100,7 @@ public class ComodiXmlEntity
 	 * For example the <code>&lt;model id=".."</code> in SBML models.
 	 * 
 	 * <pre>
-	 * ModelId -&gt; Attribute -&gt; XmlEntity
+	 * ModelId -&gt; EntityIdentifier -&gt; XmlAttribute -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the model id term
@@ -117,7 +117,7 @@ public class ComodiXmlEntity
 	 * attribute.
 	 * 
 	 * <pre>
-	 * EntityName -&gt; Attribute -&gt; XmlEntity
+	 * EntityName -&gt; XmlAttribute -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the entity name term
@@ -134,7 +134,7 @@ public class ComodiXmlEntity
 	 * For example the <code>&lt;model name=".."</code> in SBML models.
 	 * 
 	 * <pre>
-	 * ModelName -&gt; Attribute -&gt; XmlEntity
+	 * ModelName -&gt; EntityName -&gt; XmlAttribute -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the model name term
@@ -150,14 +150,14 @@ public class ComodiXmlEntity
 	 * Gets the term representing an XML text node.
 	 * 
 	 * <pre>
-	 * Text -&gt; XmlEntity
+	 * XmlText -&gt; XmlEntity
 	 * </pre>
 	 * 
 	 * @return the text node term
-	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Text">term definition</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#XmlText">term definition</a>
 	 */
 	public static ComodiXmlEntity getText ()
 	{
-		return new ComodiXmlEntity ("Text");
+		return new ComodiXmlEntity ("XmlText");
 	}
 }

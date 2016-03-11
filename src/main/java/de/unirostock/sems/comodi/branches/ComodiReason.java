@@ -109,4 +109,20 @@ public class ComodiReason
 		return new ComodiReason ("ModelCuration");
 	}
 	
+	
+	/**
+	 * Gets the term representing a changed specification.
+	 * 
+	 * <pre>
+	 * ChangedSpecification -&gt; Reason
+	 * </pre>
+	 * 
+	 * @return the model curation term
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ChangedSpecification">term definition</a>
+	 */
+	public static ComodiReason getChangedSpecification ()
+	{
+		return new ComodiReason ("ChangedSpecification");
+	}
+	
 }

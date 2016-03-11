@@ -32,7 +32,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import de.unirostock.sems.comodi.branches.ComodiChangeType;
 import de.unirostock.sems.comodi.branches.ComodiIntention;
 import de.unirostock.sems.comodi.branches.ComodiReason;
 import de.unirostock.sems.comodi.branches.ComodiTarget;
@@ -65,20 +64,19 @@ public class ComodiTest
 			
 			ChangeFactory cb = new ChangeFactory (URI.create ("file://bives.patch"));
 			
-			Change change = cb.createChange (dn);
+			Change change = cb.createMove (ChangeFactory.getSubjectId (dn));
 			change.appliesTo (ComodiXmlEntity.getNode ())
 				.hasIntention (ComodiIntention.getCorrection ())
-				.hasChangeType (ComodiChangeType.getMove ())
 				.hasReason (ComodiReason.getModelCuration ())
 				.affects (ComodiTarget.getParameterDefinition ())
 				.affects (ComodiTarget.getKinetics ());
 			
 			String xml = cb.getRdfXml ();
 			// xml = xml.replaceAll ("file://bives.patch", "");
-			//System.out.println (xml);
+			// System.out.println (xml);
 			TreeDocument d2 = new TreeDocument (XmlTools.readDocument (xml), null);
 			
-			assertEquals ("expected 8 nodes", 8, d2.getNumNodes ());
+			assertEquals ("expected 7 nodes", 7, d2.getNumNodes ());
 			assertEquals ("expected 2 'affected' nodes", 2,
 				d2.getNodesByTag ("affects").size ());
 			assertEquals ("expected 1 'appliesTo' node", 1,

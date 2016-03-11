@@ -19,7 +19,6 @@
  */
 package de.unirostock.sems.comodi;
 
-import de.unirostock.sems.comodi.branches.ComodiChangeType;
 import de.unirostock.sems.comodi.branches.ComodiIntention;
 import de.unirostock.sems.comodi.branches.ComodiReason;
 import de.unirostock.sems.comodi.branches.ComodiTarget;
@@ -32,7 +31,6 @@ import de.unirostock.sems.comodi.branches.ComodiXmlEntity;
  * branches:
  * 
  * <ul>
- * <li>Type, see {@link ComodiChangeType}
  * <li>XmlEntity, see {@link ComodiXmlEntity}
  * <li>Intention, see {@link ComodiIntention}
  * <li>Reason, see {@link ComodiReason}

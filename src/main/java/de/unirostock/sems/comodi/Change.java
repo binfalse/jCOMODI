@@ -28,14 +28,11 @@ import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
-import org.jdom2.Element;
 
-import de.unirostock.sems.comodi.branches.ComodiChangeType;
 import de.unirostock.sems.comodi.branches.ComodiIntention;
 import de.unirostock.sems.comodi.branches.ComodiReason;
 import de.unirostock.sems.comodi.branches.ComodiTarget;
 import de.unirostock.sems.comodi.branches.ComodiXmlEntity;
-import de.unirostock.sems.xmlutils.ds.DocumentNode;
 
 
 
@@ -50,8 +47,6 @@ import de.unirostock.sems.xmlutils.ds.DocumentNode;
  * {@link #hasIntention(ComodiIntention)}
  * <li>be because of a {@link ComodiReason}, see
  * {@link #hasReason(ComodiReason)}
- * <li>be of type a {@link ComodiChangeType}, see
- * {@link #hasChangeType(ComodiChangeType)}
  * <li>be triggered by another a {@link Change}, see
  * {@link #wasTriggeredBy(String)}
  * </ul>
@@ -75,39 +70,25 @@ public class Change
 	
 	
 	/**
-	 * The Constructor specifying the node in the delta and the Apache/Jena RDF
-	 * model.
-	 * The node <code>node</code> is supposed to have an <code>id</code>
-	 * attribute.
+	 * Instantiates a new change.
+	 * <strong>You should never need to call this constructor on your
+	 * own!</strong>
+	 * Instead, instantiate a {@link de.unirostock.sems.comodi.ChangeFactory} to
+	 * create Insertions, Deletions, Moves, Updates, etc.
 	 * 
-	 * @param node
-	 *          the node encoding for the differences
+	 * @param subjectId
+	 *          the id of the subject(-node) encoding for the change
 	 * @param model
 	 *          the RDF model
-	 * @param baseUri
 	 *          the base URI of the elements we're talking about
-	 */
-	public Change (Element node, Model model, URI baseUri)
-	{
-		init (node.getAttributeValue ("id"), model, baseUri);
-	}
-	
-	
-	/**
-	 * The Constructor specifying the node in the delta and the Apache/Jena RDF
-	 * model.
-	 * The node <code>node</code> is supposed to have an id-attribute.
-	 * 
-	 * @param node
-	 *          the node encoding for the differences
-	 * @param model
-	 *          the RDF model
-	 * @param baseUri
+	 * @param baseUri 
 	 *          the base URI of the elements we're talking about
+	 * @param type
+	 *          the change type (insertion, deletion, etc)
 	 */
-	public Change (DocumentNode node, Model model, URI baseUri)
+	public Change (String subjectId, Model model, URI baseUri, String type)
 	{
-		init (node.getId (), model, baseUri);
+		init (subjectId, model, baseUri, type);
 	}
 	
 	
@@ -115,13 +96,13 @@ public class Change
 	 * Initialises this change.
 	 * 
 	 * @param nodeId
-	 *          the node id
+	 *          the id of the node encoding for the change
 	 * @param model
-	 *          the model
+	 *          the RDF model
 	 * @param baseUri
 	 *          the base URI of the elements we're talking about
 	 */
-	private void init (String nodeId, Model model, URI baseUri)
+	private void init (String nodeId, Model model, URI baseUri, String type)
 	{
 		this.baseUri = baseUri;
 		this.model = model;
@@ -129,13 +110,14 @@ public class Change
 		this.statements = new ArrayList<Statement> ();
 		this.statements.add (model.createStatement (this.subject,
 			model.createProperty (ChangeFactory.RDF_NS, "type"),
-			model.createResource (ChangeFactory.COMODI_NS + "Change")));
+			model.createResource (ChangeFactory.COMODI_NS + type)));
 	}
 	
 	
 	/**
-	 * Gets the change as an RDF resource. Might be useful if you want to use it in other annotations.
-	 *
+	 * Gets the change as an RDF resource. Might be useful if you want to use it
+	 * in other annotations.
+	 * 
 	 * @return the change as resource
 	 */
 	public Resource getChangeAsResource ()
@@ -204,22 +186,6 @@ public class Change
 	
 	
 	/**
-	 * Adds information about the type of this change.
-	 * 
-	 * @param changeType
-	 *          the change type
-	 * @return this change
-	 */
-	public Change hasChangeType (ComodiChangeType changeType)
-	{
-		statements.add (model.createStatement (this.subject,
-			model.createProperty (ChangeFactory.COMODI_NS, "hasChangeType"),
-			model.createResource (ChangeFactory.COMODI_NS + changeType.getTerm ())));
-		return this;
-	}
-	
-	
-	/**
 	 * Adds information about the target that is affected by this change.
 	 * 
 	 * @param target
@@ -253,9 +219,11 @@ public class Change
 	
 	/**
 	 * Adds another custom annotation describing this change.
-	 *
-	 * @param predicate the predicate
-	 * @param object the object
+	 * 
+	 * @param predicate
+	 *          the predicate
+	 * @param object
+	 *          the object
 	 * @return this change
 	 */
 	public Change addAnnotation (Property predicate, RDFNode object)

@@ -34,14 +34,32 @@ import de.unirostock.sems.xmlutils.ds.DocumentNode;
 
 /**
  * The Class ChangeFactory creating and storing changes.
- * A new change can be obtained by calling {@link #createChange(Element)} or
- * {@link #createChange(DocumentNode)}.
+ * 
+ * <p>
+ * A new change can be obtained by calling one of the methods
+ * <ul>
+ * <li>{@link #createInsertion(String)}</li>
+ * <li>{@link #createDeletion(String)}</li>
+ * <li>{@link #createMove(String)}</li>
+ * <li>{@link #createUpdate(String)}</li>
+ * <li>{@link #createPermutationOfEntities(String)}</li>
+ * </ul>
+ * providing the id of the subject(-node) encoding for the differences.
+ * 
+ * <p>
+ * If you do not have any information of the type of change, you can also call
+ * the {@link #createChange(String)} method to semantically just say it's a
+ * change..
+ * 
+ * <p>
  * The annotations can be obtained using {@link #getAnnotaions()} (as
  * Apache/Jena RDF model), {@link #getRdfXml()} (encoded in RDF/XML),
  * {@link #printTtl()} (printed to sysout in TURTLE format), or
  * {@link #printXml()} (printed to sysout in RDF/XML format).
  * 
  * @author Martin Scharm
+ * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Change">The Change
+ *      class and it's sub classes</a>
  */
 public class ChangeFactory
 {
@@ -66,8 +84,10 @@ public class ChangeFactory
 	
 	/** The friend-of-a-friend namespace. */
 	public static final String	FOAF_NS		= "http://xmlns.com/foaf/0.1/";
-
-	/** The Open Archives Initiative Object Reuse and Exchange (OAI-ORE) namespace. */
+	
+	/**
+	 * The Open Archives Initiative Object Reuse and Exchange (OAI-ORE) namespace.
+	 */
 	public static final String	ORE_NS		= "http://www.openarchives.org/ore/terms/";
 	
 	/** The URI of the file containing the changes we'll be talking about. */
@@ -101,10 +121,9 @@ public class ChangeFactory
 	}
 	
 	
-	
 	/**
 	 * Gets the base URI for entities in this patch.
-	 *
+	 * 
 	 * @return the base URI
 	 */
 	public URI getBaseUri ()
@@ -115,10 +134,10 @@ public class ChangeFactory
 	
 	/**
 	 * Gets all registered changes.
-	 *
+	 * 
 	 * @return the changes
 	 */
-	public List<Change>	getChanges ()
+	public List<Change> getChanges ()
 	{
 		return changes;
 	}
@@ -151,36 +170,181 @@ public class ChangeFactory
 	
 	
 	/**
-	 * Creates a change encoded in the JDOM element <code>node</code>.
-	 * <code>node</code> is supposed to have an <code>id</code> attribute.
+	 * Creates a change encoded the subject with <code>subjectId</code>.
+	 * Calling this method means you have no more information about the type of
+	 * that change. Otherwise you should call on of the methods
+	 * <ul>
+	 * <li>{@link #createInsertion(String)}</li>
+	 * <li>{@link #createDeletion(String)}</li>
+	 * <li>{@link #createMove(String)}</li>
+	 * <li>{@link #createUpdate(String)}</li>
+	 * <li>{@link #createPermutationOfEntities(String)}</li>
+	 * </ul>
+	 * 
+	 * See {@link #getSubjectId(Element)} and {@link #getSubjectId(DocumentNode)}
+	 * to conveniently obtain the subjectId of JDOM2 Elements and DocumentNodes.
+	 * 
+	 * @param subjectId
+	 *          the id of the subject, ie. the change
+	 * @return the change
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Change">The Change
+	 *      class and it's sub classes</a>
+	 */
+	public Change createChange (String subjectId)
+	{
+		return createChange (subjectId, "Change");
+	}
+	
+	
+	/**
+	 * Gets the subject id of an Element.
+	 * 
+	 * The subject id if will effectively be the element's <code>id</code>
+	 * attribute value.
+	 * That means, this node is supposed to have an <code>id</code> attribute.
 	 * 
 	 * @param node
-	 *          the node encoding for the change
-	 * @return the change
+	 *          the document node
+	 * @return the subject id
+	 * @see org.jdom2.Element
 	 */
-	public Change createChange (Element node)
+	public static String getSubjectId (Element node)
 	{
-		Change change = new Change (node, model, baseUri);
+		return node.getAttributeValue ("id");
+	}
+	
+	
+	/**
+	 * Gets the subject id of a DocumentNode.
+	 * 
+	 * The subject id if will effectively be the node's <code>getId()</code>.
+	 * That means, this node is supposed to have an <code>id</code> attribute.
+	 * 
+	 * @param node
+	 *          the document node
+	 * @return the subject id
+	 * @see de.unirostock.sems.xmlutils.ds.DocumentNode
+	 */
+	public static String getSubjectId (DocumentNode node)
+	{
+		return node.getId ();
+	}
+	
+	
+	/**
+	 * Creates a new Change object for a subject. This change will be of type
+	 * <code>type</code>
+	 * 
+	 * @param subjectId
+	 *          the subject id
+	 * @param type
+	 *          the type
+	 * @return the change
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Change">The Change
+	 *      class and it's sub classes</a>
+	 */
+	protected Change createChange (String subjectId, String type)
+	{
+		Change change = new Change (subjectId, model, baseUri, type);
 		changes.add (change);
 		return change;
 	}
 	
 	
 	/**
-	 * Creates a change encoded in the
-	 * {@link de.unirostock.sems.xmlutils.ds.DocumentNode DocumentNode} element
-	 * <code>node</code>. <code>node</code> is supposed to have an id-attribute.
+	 * Creates a insertion encoded the subject with <code>subjectId</code>.
+	 * See {@link #getSubjectId(Element)} and {@link #getSubjectId(DocumentNode)}
+	 * to conveniently obtain the subjectId of JDOM2 Elements and DocumentNodes.
 	 * 
-	 * @param node
-	 *          the node encoding for the change
+	 * @param subjectId
+	 *          the id of the subject, ie. the change
 	 * @return the change
-	 * @see de.unirostock.sems.xmlutils.ds.DocumentNode DocumentNode
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Change">The Change
+	 *      class and it's sub classes</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Insertion">The
+	 *      Insertion class</a>
 	 */
-	public Change createChange (DocumentNode node)
+	public Change createInsertion (String subjectId)
 	{
-		Change change = new Change (node, model, baseUri);
-		changes.add (change);
-		return change;
+		return createChange (subjectId, "Insertion");
+	}
+	
+	
+	/**
+	 * Creates a deletion encoded the subject with <code>subjectId</code>.
+	 * See {@link #getSubjectId(Element)} and {@link #getSubjectId(DocumentNode)}
+	 * to conveniently obtain the subjectId of JDOM2 Elements and DocumentNodes.
+	 * 
+	 * @param subjectId
+	 *          the id of the subject, ie. the change
+	 * @return the change
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Change">The Change
+	 *      class and it's sub classes</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Deletion">The
+	 *      Deletion class</a>
+	 */
+	public Change createDeletion (String subjectId)
+	{
+		return createChange (subjectId, "Deletion");
+	}
+	
+	
+	/**
+	 * Creates a update encoded the subject with <code>subjectId</code>.
+	 * See {@link #getSubjectId(Element)} and {@link #getSubjectId(DocumentNode)}
+	 * to conveniently obtain the subjectId of JDOM2 Elements and DocumentNodes.
+	 * 
+	 * @param subjectId
+	 *          the id of the subject, ie. the change
+	 * @return the change
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Change">The Change
+	 *      class and it's sub classes</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Update">The Update
+	 *      class</a>
+	 */
+	public Change createUpdate (String subjectId)
+	{
+		return createChange (subjectId, "Update");
+	}
+	
+	
+	/**
+	 * Creates a move encoded the subject with <code>subjectId</code>.
+	 * See {@link #getSubjectId(Element)} and {@link #getSubjectId(DocumentNode)}
+	 * to conveniently obtain the subjectId of JDOM2 Elements and DocumentNodes.
+	 * 
+	 * @param subjectId
+	 *          the id of the subject, ie. the change
+	 * @return the change
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Change">The Change
+	 *      class and it's sub classes</a>
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Move">The Move
+	 *      class</a>
+	 */
+	public Change createMove (String subjectId)
+	{
+		return createChange (subjectId, "Move");
+	}
+	
+	
+	/**
+	 * Creates a permutation of entities (move) encoded the subject with
+	 * <code>subjectId</code>.
+	 * See {@link #getSubjectId(Element)} and {@link #getSubjectId(DocumentNode)}
+	 * to conveniently obtain the subjectId of JDOM2 Elements and DocumentNodes.
+	 * 
+	 * @param subjectId
+	 *          the id of the subject, ie. the change
+	 * @return the change
+	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#Change">The Change
+	 *      class and it's sub classes</a>
+	 * @see <a
+	 *      href="http://purl.uni-rostock.de/comodi/comodi#PermutationOfEntities">The
+	 *      PermutationOfEntities class</a>
+	 */
+	public Change createPermutationOfEntities (String subjectId)
+	{
+		return createChange (subjectId, "PermutationOfEntities");
 	}
 	
 	

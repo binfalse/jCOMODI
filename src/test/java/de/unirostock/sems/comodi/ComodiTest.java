@@ -68,7 +68,7 @@ public class ComodiTest
 			change.appliesTo (ComodiXmlEntity.getNode ())
 				.hasIntention (ComodiIntention.getCorrection ())
 				.hasReason (ComodiReason.getModelCuration ())
-				.affects (ComodiTarget.getParameterDefinition ())
+				.affects (ComodiTarget.getParameterSetup ())
 				.affects (ComodiTarget.getKineticsDefinition ());
 			
 			String xml = cb.getRdfXml ();

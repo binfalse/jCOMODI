@@ -351,7 +351,7 @@ public class ComodiTarget
 	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#SpeciesSetup">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getSpeciesDefinition ()
+	public static ComodiTarget getSpeciesSetup ()
 	{
 		return new ComodiTarget ("SpeciesSetup");
 	}
@@ -368,7 +368,7 @@ public class ComodiTarget
 	 * @see <a href="http://purl.uni-rostock.de/comodi/comodi#ParameterSetup">term
 	 *      definition</a>
 	 */
-	public static ComodiTarget getParameterDefinition ()
+	public static ComodiTarget getParameterSetup ()
 	{
 		return new ComodiTarget ("ParameterSetup");
 	}

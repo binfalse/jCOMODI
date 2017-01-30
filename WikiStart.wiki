@@ -1,0 +1,31 @@
+= jCOMODI =
+This is the web page for [comodi:wiki COMODI]'s Java library '''jCOMODI'''.
+
+== learn more ==
+* about the [[API]]
+* the [ComodiSerialisation#RDFXML RDF/XML] serialisation
+* the [ComodiSerialisation#TURTLE TURTLE] serialisation
+
+== include jCOMODI using Maven ==
+
+
+* [http://mvn.sems.uni-rostock.de/releases/de/unirostock/sems/jCOMODI/ find latest version id]
+* import the [https://sems.uni-rostock.de/2013/10/maven-repository/ SEMS Maven repository]
+* add the following dependency to your project:
+
+{{{
+#!xml
+<dependency>
+    <groupId>de.unirostock.sems</groupId>
+    <artifactId>jCOMODI</artifactId>
+    <version>$VERSION</version>
+</dependency>
+}}}
+
+== Download ==
+Binaries can be obtain from our binary repository: http://bin.sems.uni-rostock.de/jCOMODI
+
+Sources can be found:
+* in the browse source tab, see source:src/main/java/de/unirostock/sems/comodi
+* at GitHub: https://github.com/binfalse/jCOMODI
+* on our git server `sems.uni-rostock.de:jcomodi`

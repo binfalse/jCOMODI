@@ -1,11 +1,12 @@
-Serialisations of [COMODI](comodi:wiki) annotations in jCOMODI 
-===============================================================
-RDF/XML 
---------
-example of an [http://www.w3.org/TR/rdf-syntax-grammar/ RDF/XML] annotation:
+Serialisations of [COMODI](http://sems.uni-rostock.de/trac/wiki/comodi/wiki) annotations in jCOMODI 
+===================================================================================================
 
-```
-#!xml
+RDF/XML 
+-------
+
+example of an [RDF/XML](http://www.w3.org/TR/rdf-syntax-grammar/) annotation:
+
+```xml
 <rdf:RDF
     xmlns:comodi="http://purl.org/net/comodi#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -22,8 +23,10 @@ example of an [http://www.w3.org/TR/rdf-syntax-grammar/ RDF/XML] annotation:
 
 TURTLE 
 -------
+
 example of an annotation in [TURTLE](https://en.wikipedia.org/wiki/Turtle_%28syntax%29) format
-```
+
+```turtle
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix comodi: <http://purl.org/net/comodi#> .
 

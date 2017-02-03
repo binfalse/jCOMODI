@@ -31,5 +31,6 @@ Download
 Binaries can be obtain from our [binary repository](http://bin.sems.uni-rostock.de/jCOMODI)
 
 Sources can be found:
+
 * in the browse source tab, see /src/main/java/de/unirostock/sems/comodi
 * at GitHub: [GitHub.com/binfalse/jCOMODI](https://github.com/binfalse/jCOMODI) or [GitHub.com/SemsProject/jCOMODI](https://github.com/SemsProject/jCOMODI)

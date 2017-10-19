@@ -92,4 +92,19 @@ public class ComodiTest
 			fail ("failed to test for changes");
 		}
 	}
+	
+	/**
+	 * Simple test.
+	 */
+	@Test
+	public void simpleTest2 ()
+	{
+
+		ChangeFactory changeFac = new ChangeFactory (URI.create ("http://base.uri"));
+		Change change = changeFac.createDeletion ("subjectid");
+		change.appliesTo (ComodiXmlEntity.getAttribute ());
+		change.affects (ComodiTarget.getReactionDefinition ());
+		change.hasReason (ComodiReason.getKnowledgeGain ());
+		System.out.println (changeFac.getRdfXml ());
+	}
 }

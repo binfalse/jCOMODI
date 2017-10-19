@@ -40,21 +40,26 @@ You can then for example annotate a deletion with:
 The snippet above will result in an XML, which may look like this:
 
 	<rdf:RDF
-			xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-			xmlns:prov="http://www.w3.org/ns/prov#"
-			xmlns:pav="http://purl.org/pav/"
-			xmlns:ore="http://www.openarchives.org/ore/terms/"
-			xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-			xmlns:comodi="http://purl.uni-rostock.de/comodi/comodi#"
-			xmlns:foaf="http://xmlns.com/foaf/0.1/">
-		<comodi:Deletion rdf:about="http://base.uri#subjectid">
-			<comodi:hasReason rdf:resource="http://purl.uni-rostock.de/comodi/comodi#KnowledgeGain"/>
-			<comodi:affects rdf:resource="http://purl.uni-rostock.de/comodi/comodi#ReactionDefinition"/>
-			<comodi:appliesTo rdf:resource="http://purl.uni-rostock.de/comodi/comodi#XmlAttribute"/>
-		</comodi:Deletion>
+	    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	    xmlns:prov="http://www.w3.org/ns/prov#"
+	    xmlns:pav="http://purl.org/pav/"
+	    xmlns:ore="http://www.openarchives.org/ore/terms/"
+	    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	    xmlns:comodi="http://purl.uni-rostock.de/comodi/comodi#"
+	    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+	  <comodi:Deletion rdf:about="http://base.uri#subjectid">
+	    <comodi:hasReason rdf:resource="http://purl.uni-rostock.de/comodi/comodi#KnowledgeGain"/>
+	    <comodi:affects rdf:resource="http://purl.uni-rostock.de/comodi/comodi#ReactionDefinition"/>
+	    <comodi:appliesTo rdf:resource="http://purl.uni-rostock.de/comodi/comodi#XmlAttribute"/>
+	  </comodi:Deletion>
 	</rdf:RDF>
 
 
+Further examples can be found in BiVeS, which uses jCOMODI to annotate differences between computational models:
+
+* [SBMLDiffAnnotator](https://github.com/binfalse/BiVeS-SBML/blob/master/src/main/java/de/unirostock/sems/bives/sbml/algorithm/SBMLDiffAnnotator.java)
+* [CellMLDiffAnnotator](https://github.com/binfalse/BiVeS-CellML/blob/master/src/main/java/de/unirostock/sems/bives/cellml/algorithm/CellMLDiffAnnotator.java)
+* above classes depend on [DefaultDiffAnnotator](https://github.com/binfalse/BiVeS-Core/blob/master/src/main/java/de/unirostock/sems/bives/algorithm/general/DefaultDiffAnnotator.java)
 
 
 ## LICENSE

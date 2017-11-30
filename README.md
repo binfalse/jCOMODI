@@ -12,7 +12,7 @@ _(click to get a larger version)_
 The easiest way to include jCOMODI is to add the artifact as a dependency to your Maven project:
 
 	<dependency>
-		<groupId>de.unirostock.sems</groupId>
+		<groupId>de.uni-rostock.sbi</groupId>
 		<artifactId>jCOMODI</artifactId>
 		<version>$version</version>
 	</dependency>
